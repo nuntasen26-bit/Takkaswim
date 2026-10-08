@@ -1,0 +1,164 @@
+{
+  "name": "assets/50d8f729875e408d82646aa5f94dc871",
+  "designSystem": {
+    "displayName": "Takkasila Aquatic Athletic Interface",
+    "styleGuidelines": "## Brand & Style\n\nThis design system establishes a high-performance, futuristic athletic aesthetic for competitive aquatic sports and club management. Rooted in the visual identity of collegiate aquatic excellence, it blends deep abyssal tones with electric fluid energy to project precision, speed, discipline, and velocity.\n\nThe visual style blends **Dark Futuristic HUD** and **Fluid Glassmorphism**:\n- **Atmospheric Abyss:** Deep, multi-layered obsidian and midnight navy backgrounds create an immersive underwater stadium ambiance.\n- **Electric Bioluminescence & Caustics:** Vibrant electric blues, neon cyans, and frosted translucent glass panels simulate refractive water surfaces, pool lanes, and stopwatch telemetry.\n- **Athletic Precision:** High-contrast geometric typographic hierarchy combined with sharp, shield-inspired crest contours and angular hydrodynamic trims.\n- **Target Audience:** Competitive swimmers, varsity coaching staff, club alumni, and athletic patrons who demand real-time telemetry, split tracking, and club updates in an energizing, modern interface.\n\n## Layout & Spacing\n\nThis mobile-first system is calibrated around standard compact handheld devices (390px-430px base viewport widths) while maintaining fluid responsiveness:\n\n- **Grid Architecture:** 4-column fluid mobile grid anchored by `1.25rem` (20px) outer edge margins and `1rem` (16px) gutters. Content blocks span 2 or 4 columns.\n- **Rhythmic Scale:** Built on a rigorous 4px/8px base rhythm.\n  - `space-xs` (4px): Micro gaps between athletic indicators, timing badges, and icons.\n  - `space-sm` (8px): Internal spacing for tags, pill chips, and nested stats.\n  - `space-md` (16px): Standard padding inside cards and form input fields.\n  - `space-lg` (24px): Structural gaps between related dashboard modules.\n  - `space-xl` (36px): Generous separation between macro screen sections.\n- **Ergonomic Safe Zones:** Bottom interactive navigation docks incorporate an additional `2rem` bottom pad for device home indicator clearances.\n\n## Elevation & Depth\n\nVisual hierarchy is constructed through luminous optical glassmorphism and cyan-tinted atmospheric backlights rather than standard opaque dropshadows.\n\n- **Foundation Tier (Level 0):** Pure background canvas styled with deep Navy `#0B132B`, punctuated with static radial caustics (`radial-gradient(ellipse at top right, rgba(0, 180, 216, 0.12), transparent 70%)`).\n- **Surface Level 1 (Dashboard Cards & Panels):** Translucent deep navy fill `rgba(28, 37, 65, 0.70)` combined with `backdrop-filter: blur(16px)` and a crisp 1px perimeter border of `rgba(72, 202, 228, 0.18)`.\n- **Surface Level 2 (Active Modals & Floating Docks):** Translucent fill `rgba(28, 37, 65, 0.85)` with `backdrop-filter: blur(24px)` and outer ambient aquatic glow: `0 8px 32px -4px rgba(0, 180, 216, 0.25)`.\n- **Interactive Element Elevation:** Active buttons and key record highlights feature dynamic caustic outer halos: `0 0 20px rgba(0, 180, 216, 0.45)`, simulating intense underwater spotlights.\n\n## Components\n\n### Buttons\n- **Primary Athletic Button:** Pill-shaped (`rounded-full`) filled with linear gradient `linear-gradient(135deg, #00B4D8 0%, #3A86FF 100%)`. Label in pure white bold Space Grotesk. Hover/active states project an electric ice-cyan outer glow (`box-shadow: 0 0 18px rgba(0, 180, 216, 0.5)`).\n- **Secondary Ghost Button:** Translucent backdrop `rgba(255, 255, 255, 0.05)`, bordered with `1.5px solid rgba(72, 202, 228, 0.3)`. Text rendered in `#48CAE4`.\n- **Icon Quick-Actions:** 44x44px circular glass panels (`rounded-full`) housing high-contrast white athletic SVG icons.\n\n### Sports Dashboard Cards\n- **Telemetry Metric Tile:** Glassmorphic substrate with a top-accented electric border gradient. Features small uppercase label (`label-md`) in tertiary cyan, followed by oversized numerical split times (`telemetry-num`) in pure white.\n- **Athlete Profile Card:** Features an offset shield-cut avatar frame rimmed with `#3A86FF`, swimmer rank badge, and quick stats for 50m/100m freestyle records.\n\n### Chips & Badges\n- **Heat / Lane Chips:** High-density capsules with deep navy fill and high-contrast borders: `border: 1px solid rgba(0, 180, 216, 0.4)`. Text in uppercase `Space Grotesk`.\n- **PR (Personal Record) Tag:** Energetic `#3A86FF` filled micro-badge with pure white text and an ice-glow dot indicator.\n\n### Input Fields\n- Dark input containers (`rgba(11, 19, 43, 0.6)`) with subtle inner shadows. Default border is `1px solid rgba(255, 255, 255, 0.15)`. Upon focus, transitions seamlessly to `1px solid #00B4D8` with a 4px aqua field diffusion.\n\n### Lists & Split Logs\n- Lap-by-lap split logs presented as row items separated by subtle hairpins `rgba(72, 202, 228, 0.12)`. Hover or tap triggers an active fluid ripple gradient shifting from `#1C2541` to `rgba(58, 134, 255, 0.15)`.\n- Stroke-rate icons positioned on the leading edge with numeric split times aligned to the right margin.\n\n### Checkboxes & Segmented Controls\n- **Segment Controls:** Glass capsule enclosure holding rounded-full toggle segments. Active tab slides with a glowing gradient fill (`#00B4D8` to `#3A86FF`).\n- **Selection Controls:** Custom circular checkboxes mirroring pool lane buoys, filling with solid Electric Blue and displaying a crisp white athletic check icon.",
+    "theme": {
+      "colorMode": "DARK",
+      "font": "SPACE_GROTESK",
+      "roundness": "ROUND_EIGHT",
+      "customColor": "#00b4d8",
+      "headlineFont": "SPACE_GROTESK",
+      "bodyFont": "INTER",
+      "labelFont": "SPACE_GROTESK",
+      "namedColors": {
+        "surface_tint": "#4cd6fb",
+        "secondary_fixed_dim": "#adc6ff",
+        "on_error": "#690005",
+        "inverse_surface": "#dbe1ff",
+        "secondary_container": "#006be3",
+        "surface_container_highest": "#2c344d",
+        "on_surface": "#dbe1ff",
+        "on_secondary_fixed_variant": "#004494",
+        "secondary_fixed": "#d8e2ff",
+        "surface_container_high": "#212942",
+        "on_tertiary_fixed_variant": "#004e5b",
+        "secondary": "#adc6ff",
+        "outline": "#869398",
+        "on_error_container": "#ffdad6",
+        "surface_container_low": "#131a33",
+        "primary_fixed": "#b3ebff",
+        "primary": "#4cd6fb",
+        "error_container": "#93000a",
+        "on_secondary": "#002e69",
+        "surface_bright": "#313852",
+        "surface_variant": "#2c344d",
+        "tertiary": "#58d6f1",
+        "on_primary": "#003642",
+        "inverse_on_surface": "#282f49",
+        "tertiary_fixed": "#a7edff",
+        "on_primary_container": "#00414f",
+        "tertiary_fixed_dim": "#58d6f1",
+        "on_tertiary_container": "#00414c",
+        "outline_variant": "#3d494d",
+        "surface_container": "#171e37",
+        "surface_dim": "#0a122a",
+        "inverse_primary": "#00677d",
+        "on_secondary_container": "#f2f4ff",
+        "on_tertiary_fixed": "#001f25",
+        "on_secondary_fixed": "#001a41",
+        "on_surface_variant": "#bcc9ce",
+        "error": "#ffb4ab",
+        "on_primary_fixed_variant": "#004e5f",
+        "on_background": "#dbe1ff",
+        "on_primary_fixed": "#001f27",
+        "surface_container_lowest": "#050d25",
+        "primary_fixed_dim": "#4cd6fb",
+        "surface": "#0a122a",
+        "on_tertiary": "#00363f",
+        "background": "#0a122a",
+        "primary_container": "#00b4d8",
+        "tertiary_container": "#25b4ce"
+      },
+      "designMd": "---\nname: Takkasila Aquatic Athletic Interface\ncolors:\n  surface: '#0a122a'\n  surface-dim: '#0a122a'\n  surface-bright: '#313852'\n  surface-container-lowest: '#050d25'\n  surface-container-low: '#131a33'\n  surface-container: '#171e37'\n  surface-container-high: '#212942'\n  surface-container-highest: '#2c344d'\n  on-surface: '#dbe1ff'\n  on-surface-variant: '#bcc9ce'\n  inverse-surface: '#dbe1ff'\n  inverse-on-surface: '#282f49'\n  outline: '#869398'\n  outline-variant: '#3d494d'\n  surface-tint: '#4cd6fb'\n  primary: '#4cd6fb'\n  on-primary: '#003642'\n  primary-container: '#00b4d8'\n  on-primary-container: '#00414f'\n  inverse-primary: '#00677d'\n  secondary: '#adc6ff'\n  on-secondary: '#002e69'\n  secondary-container: '#006be3'\n  on-secondary-container: '#f2f4ff'\n  tertiary: '#58d6f1'\n  on-tertiary: '#00363f'\n  tertiary-container: '#25b4ce'\n  on-tertiary-container: '#00414c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#b3ebff'\n  primary-fixed-dim: '#4cd6fb'\n  on-primary-fixed: '#001f27'\n  on-primary-fixed-variant: '#004e5f'\n  secondary-fixed: '#d8e2ff'\n  secondary-fixed-dim: '#adc6ff'\n  on-secondary-fixed: '#001a41'\n  on-secondary-fixed-variant: '#004494'\n  tertiary-fixed: '#a7edff'\n  tertiary-fixed-dim: '#58d6f1'\n  on-tertiary-fixed: '#001f25'\n  on-tertiary-fixed-variant: '#004e5b'\n  background: '#0a122a'\n  on-background: '#dbe1ff'\n  surface-variant: '#2c344d'\ntypography:\n  display:\n    fontFamily: Space Grotesk\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Space Grotesk\n    fontSize: 30px\n    fontWeight: '700'\n    lineHeight: 38px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Space Grotesk\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n    letterSpacing: 0em\n  headline-sm:\n    fontFamily: Space Grotesk\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  title-md:\n    fontFamily: Inter\n    fontSize: 17px\n    fontWeight: '600'\n    lineHeight: 24px\n    letterSpacing: 0em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0em\n  body-md:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n    letterSpacing: 0.01em\n  body-sm:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: 16px\n    letterSpacing: 0.02em\n  label-lg:\n    fontFamily: Space Grotesk\n    fontSize: 13px\n    fontWeight: '700'\n    lineHeight: 18px\n    letterSpacing: 0.08em\n  label-md:\n    fontFamily: Space Grotesk\n    fontSize: 11px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  telemetry-num:\n    fontFamily: Space Grotesk\n    fontSize: 28px\n    fontWeight: '700'\n    lineHeight: 32px\n    letterSpacing: -0.03em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  gutter: 1rem\n  margin: 1.25rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2.25rem\n---\n\n## Brand & Style\n\nThis design system establishes a high-performance, futuristic athletic aesthetic for competitive aquatic sports and club management. Rooted in the visual identity of collegiate aquatic excellence, it blends deep abyssal tones with electric fluid energy to project precision, speed, discipline, and velocity.\n\nThe visual style blends **Dark Futuristic HUD** and **Fluid Glassmorphism**:\n- **Atmospheric Abyss:** Deep, multi-layered obsidian and midnight navy backgrounds create an immersive underwater stadium ambiance.\n- **Electric Bioluminescence & Caustics:** Vibrant electric blues, neon cyans, and frosted translucent glass panels simulate refractive water surfaces, pool lanes, and stopwatch telemetry.\n- **Athletic Precision:** High-contrast geometric typographic hierarchy combined with sharp, shield-inspired crest contours and angular hydrodynamic trims.\n- **Target Audience:** Competitive swimmers, varsity coaching staff, club alumni, and athletic patrons who demand real-time telemetry, split tracking, and club updates in an energizing, modern interface.\n\n## Colors\n\nThe palette is engineered around the optical dynamics of competitive swimming environments: light slicing through deep chlorinated water.\n\n- **Primary (`#00B4D8` - Aqua Velocity):** Used for key calls-to-action, active telemetry gauges, split markers, and interactive micro-states.\n- **Secondary (`#3A86FF` - Electric Royal):** Applied to athletic shields, secondary action triggers, badges, and dynamic stroke-rate progression meters.\n- **Tertiary (`#48CAE4` - Ice Caustic Glow):** A high-luminance cyan accent reserved for edge lighting, active indicator glows, ripple effects, and personal record highlight tags.\n- **Neutral Surface Ecosystem:**\n  - Base Obsidian: `#0B132B` (deep abyssal foundation)\n  - Elevated Container / Glass Core: `#1C2541` at variable opacities (`rgba(28, 37, 65, 0.65)`)\n  - Border Substrate: `#2A3B66` with high-opacity highlights\n- **Text & Foreground:**\n  - Primary Content: `#FFFFFF` (crisp pure white, zero tint)\n  - Secondary Telemetry: `rgba(255, 255, 255, 0.72)`\n  - Subdued / Inactive: `rgba(255, 255, 255, 0.45)`\n\n## Typography\n\nThe typographic hierarchy harmonizes technical sports timing equipment with rapid legibility on mobile viewports.\n\n- **Display & Headline Levels (`Space Grotesk`):** Delivers aerodynamic, forward-leaning geometric precision. Used for club crest typography, heat numbers, milestone time splits, and primary screen headers.\n- **Body Hierarchy (`Inter`):** Selected for its exceptional clarity on dark backgrounds, clean rendering in multilingual environments (compatible with Thai system fallback scripts such as Prompt/Kanit), and high x-height for training regimens and schedules.\n- **Data & Telemetry (`Space Grotesk` tabular figures):** Dedicated styling for stopwatch increments, lap counters, heart rate indicators, and yardage tallies to prevent tabular layout jitter during dynamic stopwatch updates.\n- **Uppercase Conventions:** All `label-lg` and `label-md` classes utilize uppercase styling with generous tracking (`0.08em` - `0.1em`) to mimic athletic jersey typography and race heats.\n\n## Layout & Spacing\n\nThis mobile-first system is calibrated around standard compact handheld devices (390px-430px base viewport widths) while maintaining fluid responsiveness:\n\n- **Grid Architecture:** 4-column fluid mobile grid anchored by `1.25rem` (20px) outer edge margins and `1rem` (16px) gutters. Content blocks span 2 or 4 columns.\n- **Rhythmic Scale:** Built on a rigorous 4px/8px base rhythm.\n  - `space-xs` (4px): Micro gaps between athletic indicators, timing badges, and icons.\n  - `space-sm` (8px): Internal spacing for tags, pill chips, and nested stats.\n  - `space-md` (16px): Standard padding inside cards and form input fields.\n  - `space-lg` (24px): Structural gaps between related dashboard modules.\n  - `space-xl` (36px): Generous separation between macro screen sections.\n- **Ergonomic Safe Zones:** Bottom interactive navigation docks incorporate an additional `2rem` bottom pad for device home indicator clearances.\n\n## Elevation & Depth\n\nVisual hierarchy is constructed through luminous optical glassmorphism and cyan-tinted atmospheric backlights rather than standard opaque dropshadows.\n\n- **Foundation Tier (Level 0):** Pure background canvas styled with deep Navy `#0B132B`, punctuated with static radial caustics (`radial-gradient(ellipse at top right, rgba(0, 180, 216, 0.12), transparent 70%)`).\n- **Surface Level 1 (Dashboard Cards & Panels):** Translucent deep navy fill `rgba(28, 37, 65, 0.70)` combined with `backdrop-filter: blur(16px)` and a crisp 1px perimeter border of `rgba(72, 202, 228, 0.18)`.\n- **Surface Level 2 (Active Modals & Floating Docks):** Translucent fill `rgba(28, 37, 65, 0.85)` with `backdrop-filter: blur(24px)` and outer ambient aquatic glow: `0 8px 32px -4px rgba(0, 180, 216, 0.25)`.\n- **Interactive Element Elevation:** Active buttons and key record highlights feature dynamic caustic outer halos: `0 0 20px rgba(0, 180, 216, 0.45)`, simulating intense underwater spotlights.\n\n## Shapes\n\nThe design system employs a streamlined aerodynamic geometry:\n\n- **Base Radius (`0.5rem` / 8px):** Applied to data chips, input fields, and telemetry indicators.\n- **Large Radius (`rounded-lg` / `1rem` / 16px):** Standard curvature for workout summary cards, swimmer roster tiles, and dynamic modules.\n- **Curved Shield Inset:** Hero shield crests and featured performance cards incorporate angular hydrodynamic top accents inspired by the Takkasila athletic emblem, tapering gracefully into rounded lower boundaries.\n- **Pill Geometry (`rounded-full`):** Reserved exclusively for high-velocity action buttons, lane number badges, and live race status pills (`LIVE`, `HEAT 02`).\n\n## Components\n\n### Buttons\n- **Primary Athletic Button:** Pill-shaped (`rounded-full`) filled with linear gradient `linear-gradient(135deg, #00B4D8 0%, #3A86FF 100%)`. Label in pure white bold Space Grotesk. Hover/active states project an electric ice-cyan outer glow (`box-shadow: 0 0 18px rgba(0, 180, 216, 0.5)`).\n- **Secondary Ghost Button:** Translucent backdrop `rgba(255, 255, 255, 0.05)`, bordered with `1.5px solid rgba(72, 202, 228, 0.3)`. Text rendered in `#48CAE4`.\n- **Icon Quick-Actions:** 44x44px circular glass panels (`rounded-full`) housing high-contrast white athletic SVG icons.\n\n### Sports Dashboard Cards\n- **Telemetry Metric Tile:** Glassmorphic substrate with a top-accented electric border gradient. Features small uppercase label (`label-md`) in tertiary cyan, followed by oversized numerical split times (`telemetry-num`) in pure white.\n- **Athlete Profile Card:** Features an offset shield-cut avatar frame rimmed with `#3A86FF`, swimmer rank badge, and quick stats for 50m/100m freestyle records.\n\n### Chips & Badges\n- **Heat / Lane Chips:** High-density capsules with deep navy fill and high-contrast borders: `border: 1px solid rgba(0, 180, 216, 0.4)`. Text in uppercase `Space Grotesk`.\n- **PR (Personal Record) Tag:** Energetic `#3A86FF` filled micro-badge with pure white text and an ice-glow dot indicator.\n\n### Input Fields\n- Dark input containers (`rgba(11, 19, 43, 0.6)`) with subtle inner shadows. Default border is `1px solid rgba(255, 255, 255, 0.15)`. Upon focus, transitions seamlessly to `1px solid #00B4D8` with a 4px aqua field diffusion.\n\n### Lists & Split Logs\n- Lap-by-lap split logs presented as row items separated by subtle hairpins `rgba(72, 202, 228, 0.12)`. Hover or tap triggers an active fluid ripple gradient shifting from `#1C2541` to `rgba(58, 134, 255, 0.15)`.\n- Stroke-rate icons positioned on the leading edge with numeric split times aligned to the right margin.\n\n### Checkboxes & Segmented Controls\n- **Segment Controls:** Glass capsule enclosure holding rounded-full toggle segments. Active tab slides with a glowing gradient fill (`#00B4D8` to `#3A86FF`).\n- **Selection Controls:** Custom circular checkboxes mirroring pool lane buoys, filling with solid Electric Blue and displaying a crisp white athletic check icon.",
+      "colorVariant": "FIDELITY",
+      "overridePrimaryColor": "#00b4d8",
+      "overrideSecondaryColor": "#3a86ff",
+      "overrideTertiaryColor": "#48cae4",
+      "overrideNeutralColor": "#0b132b",
+      "spacingScale": 2,
+      "typography": {
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "20px",
+          "letterSpacing": "0.01em"
+        },
+        "label-md": {
+          "fontFamily": "Space Grotesk",
+          "fontSize": "11px",
+          "fontWeight": "600",
+          "lineHeight": "16px",
+          "letterSpacing": "0.1em"
+        },
+        "headline-sm": {
+          "fontFamily": "Space Grotesk",
+          "fontSize": "20px",
+          "fontWeight": "600",
+          "lineHeight": "28px",
+          "letterSpacing": "0.01em"
+        },
+        "telemetry-num": {
+          "fontFamily": "Space Grotesk",
+          "fontSize": "28px",
+          "fontWeight": "700",
+          "lineHeight": "32px",
+          "letterSpacing": "-0.03em"
+        },
+        "headline-lg": {
+          "fontFamily": "Space Grotesk",
+          "fontSize": "30px",
+          "fontWeight": "700",
+          "lineHeight": "38px",
+          "letterSpacing": "-0.01em"
+        },
+        "body-lg": {
+          "fontFamily": "Inter",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24px",
+          "letterSpacing": "0em"
+        },
+        "label-lg": {
+          "fontFamily": "Space Grotesk",
+          "fontSize": "13px",
+          "fontWeight": "700",
+          "lineHeight": "18px",
+          "letterSpacing": "0.08em"
+        },
+        "display": {
+          "fontFamily": "Space Grotesk",
+          "fontSize": "40px",
+          "fontWeight": "700",
+          "lineHeight": "48px",
+          "letterSpacing": "-0.02em"
+        },
+        "title-md": {
+          "fontFamily": "Inter",
+          "fontSize": "17px",
+          "fontWeight": "600",
+          "lineHeight": "24px",
+          "letterSpacing": "0em"
+        },
+        "headline-md": {
+          "fontFamily": "Space Grotesk",
+          "fontSize": "24px",
+          "fontWeight": "600",
+          "lineHeight": "32px",
+          "letterSpacing": "0em"
+        },
+        "body-sm": {
+          "fontFamily": "Inter",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "16px",
+          "letterSpacing": "0.02em"
+        }
+      },
+      "spacing": {
+        "space-lg": "1.5rem",
+        "space-sm": "0.5rem",
+        "space-xs": "0.25rem",
+        "margin": "1.25rem",
+        "space-md": "1rem",
+        "gutter": "1rem",
+        "space-xl": "2.25rem"
+      },
+      "headlineFontFamily": "Space Grotesk",
+      "bodyFontFamily": "Inter",
+      "labelFontFamily": "Space Grotesk"
+    }
+  },
+  "version": "1"
+}

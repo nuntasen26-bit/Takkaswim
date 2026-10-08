@@ -1,0 +1,392 @@
+<!DOCTYPE html><html class="dark" lang="th"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0a122a;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#adc6ff", "outline-variant": "#3d494d", "background": "#0a122a", "primary-container": "#00b4d8", "on-tertiary-container": "#00414c", "on-secondary-fixed-variant": "#004494", "outline": "#869398", "surface-dim": "#0a122a", "tertiary": "#58d6f1", "primary-fixed": "#b3ebff", "on-primary": "#003642", "surface-container-low": "#131a33", "surface-container-high": "#212942", "primary-fixed-dim": "#4cd6fb", "on-error": "#690005", "inverse-on-surface": "#282f49", "surface-bright": "#313852", "on-tertiary-fixed": "#001f25", "secondary-fixed": "#d8e2ff", "on-secondary": "#002e69", "on-error-container": "#ffdad6", "secondary-container": "#006be3", "surface-container": "#171e37", "tertiary-fixed-dim": "#58d6f1", "surface-variant": "#2c344d", "on-secondary-fixed": "#001a41", "on-secondary-container": "#f2f4ff", "on-surface-variant": "#bcc9ce", "error": "#ffb4ab", "on-surface": "#dbe1ff", "on-primary-container": "#00414f", "on-primary-fixed": "#001f27", "surface-tint": "#4cd6fb", "on-tertiary-fixed-variant": "#004e5b", "tertiary-fixed": "a7edff", "on-primary-fixed-variant": "#004e5f", "primary": "#4cd6fb", "inverse-primary": "#00677d", "surface-container-lowest": "#050d25", "on-background": "#dbe1ff", "error-container": "#93000a", "on-tertiary": "#00363f", "secondary-fixed-dim": "#adc6ff", "surface": "#0a122a", "surface-container-highest": "#2c344d", "tertiary-container": "#25b4ce", "inverse-surface": "#dbe1ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1rem", "space-lg": "1.5rem", "margin": "1.25rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "1rem", "space-xl": "2.25rem" }, fontFamily: { "label-md": ["Space Grotesk"], "body-sm": ["Inter"], "display": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "title-md": ["Inter"], "headline-md": ["Space Grotesk"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Space Grotesk"], "telemetry-num": ["Space Grotesk"] }, fontSize: { "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" }], "title-md": ["17px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "telemetry-num": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.03em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-high/60 shadow-[0_0_12px_rgba(76,214,251,0.2)]"><span class="material-symbols-outlined text-primary text-[24px]">pool</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary truncate tracking-tight">Takkasila</span><span class="font-label-md text-label-md text-on-surface-variant truncate uppercase tracking-wider">Swimming Club</span></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:text-primary transition-colors hover:bg-surface-container-high/40 active:scale-95"><span class="material-symbols-outlined text-[22px]">notifications</span></button><button class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high/40 transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_0_8px_rgba(76,214,251,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7yAUeBy1W9koYvbozCTjv1mponIbanxM2XPOAfM2KCpSfN3GWyetcL3kATTL2I2mChJiyIhLzo9netyPSQFrzX2nIC1uAsG-y4GEif2rXdrWzq_XoVwVpHsZREi9sA_WRcFt54Pg2vhRsGeA6CCBGyV2qFKtWluWCQv-YAuUk-ibBubXighv7_SmK27px-OJNKCAu04HK4Pfo3mrsB633i2274sdbpBBbscFYol2ttvZRadrgzYkYLiCizYrWK93k5Ls"></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-xl gap-space-lg">
+<!-- Sub-header & Mode Switcher -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#4cd6fb]"></span>
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">Athlete Telemetry &amp; Portal</span>
+</div>
+<span class="font-label-md text-[10px] px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">
+        SS 2025
+      </span>
+</div>
+<!-- Interactive Mode Segment Controls -->
+<div class="p-1 rounded-full bg-surface-container-lowest flex items-center shadow-inner relative">
+<button class="flex-1 py-2 rounded-full font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all text-on-primary bg-gradient-to-r from-primary-container to-secondary-container shadow-[0_0_16px_rgba(0,180,216,0.35)]" id="tab-profile-btn" onclick="switchPortalTab('profile')">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span class="">โปรไฟล์ของฉัน</span>
+</button>
+<button class="flex-1 py-2 rounded-full font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all text-on-surface-variant hover:text-on-surface" id="tab-register-btn" onclick="switchPortalTab('register')">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+<span class="">สมัครสมาชิกใหม่</span>
+</button>
+</div>
+</div>
+<!-- VIEW 1: ACTIVE ATHLETE PROFILE -->
+<div class="flex flex-col gap-space-lg transition-opacity duration-300" id="view-profile">
+<!-- Digital Club ID Badge Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container/90 backdrop-blur-md p-space-md shadow-xl flex flex-col gap-space-md">
+<!-- Ambient Background Caustic Glow -->
+<div class="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-12 -bottom-12 w-40 h-40 rounded-full bg-secondary-container/15 blur-2xl pointer-events-none"></div>
+<!-- Top Member Badge Row -->
+<div class="flex items-center justify-between z-10">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest/80 px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface-variant tracking-wider">TAKKASILA VARSITY AQUATICS</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_6px_#4cd6fb]"></span>
+<span class="font-label-md text-[10px] tracking-wide font-semibold uppercase">Active Member</span>
+</div>
+</div>
+<!-- Athlete Identity Section -->
+<div class="flex items-center gap-space-md z-10">
+<div class="relative w-20 h-20 rounded-xl overflow-hidden shadow-[0_0_18px_rgba(0,180,216,0.35)] shrink-0 bg-surface-container-high"><img alt="อัศวิน จันทะคาม" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UGni0c_Bfc8rtU9Y7Nk0bGc-oxSccAO8cIaOyvz2ZaAxoPtnxx9WPk4qyZSM8-7tBBwOFbACwg-t8zN78Pjmk5IhdMhfRtsMp7LsVdJ-5B0ox8RJIHUqYIr5iR5iICweYRrsYnKfOuClKssGIoQFDQUO0VTSQA9jCrEcrDa0d5Ttba_f9i7ptzfbJNAMlyzpFnbu6bicr8-2aYBsbDvfg42BkgkMGHKVB-zTeC6aM9bj4RnN_YhyxqbZbg"><div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/60 via-transparent to-transparent"></div></div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-sm text-on-surface truncate">อัศวิน จันทะคาม</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary tracking-wider font-semibold">รหัสนักกีฬา: TK-2024-042</span>
+<div class="mt-1 flex items-center gap-1.5"><span class="px-2 py-0.5 rounded-md bg-secondary-container/30 text-secondary-fixed text-[11px] font-label-md font-medium">ทีมแข่งขัน A-Team</span><span class="text-on-surface-variant text-[11px] font-body-sm">• สปรินต์ / ฟรีสไตล์</span></div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs z-10">
+<button class="py-2.5 px-3 rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-label-lg text-label-md flex items-center justify-center gap-1.5 active:scale-95 transition-all shadow-[0_0_14px_rgba(0,180,216,0.35)]" onclick="triggerLogModal()">
+<span class="material-symbols-outlined text-[17px]">add_circle</span>
+<span class="truncate">+ บันทึกเวลาซ้อม</span>
+</button>
+<button class="py-2.5 px-3 rounded-full bg-surface-container-high/70 hover:bg-surface-container-high text-on-surface font-label-lg text-label-md flex items-center justify-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-outline text-[17px]">edit</span>
+<span class="truncate">แก้ไขข้อมูล</span>
+</button>
+</div>
+</div>
+<!-- Personal Best (PB) Telemetry Board -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-4 bg-tertiary rounded-full"></div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Personal Best (สถิติดีที่สุด)</h2>
+</div>
+<span class="font-label-md text-label-md text-tertiary tracking-wider uppercase">Official PB</span>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Metric Tile 1: 50m Freestyle -->
+<div class="bg-surface-container-low/90 rounded-xl p-space-md flex flex-col gap-1.5 shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-tertiary uppercase">ฟรีสไตล์ 50m</span>
+<span class="material-symbols-outlined text-primary text-[18px]">waves</span>
+</div>
+<div class="flex items-baseline gap-1 my-0.5">
+<span class="font-telemetry-num text-telemetry-num text-on-surface tracking-tight">27.15</span>
+<span class="font-label-md text-label-md text-primary">s</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-[11px]">
+<span class="material-symbols-outlined text-[13px] text-tertiary">update</span>
+<span class="">15 ก.พ. 68 (ซ้อม)</span>
+</div>
+</div>
+<!-- Metric Tile 2: 50m Backstroke (Club PR) -->
+<div class="bg-surface-container-low/90 rounded-xl p-space-md flex flex-col gap-1.5 shadow-md relative overflow-hidden">
+<div class="absolute top-0 right-0 px-2 py-0.5 bg-primary text-on-primary font-label-md text-[9px] font-bold uppercase rounded-bl-lg">
+            Club PR
+          </div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-tertiary uppercase">กรรเชียง 50m</span>
+</div>
+<div class="flex items-baseline gap-1 my-0.5">
+<span class="font-telemetry-num text-telemetry-num text-primary tracking-tight">29.84</span>
+<span class="font-label-md text-label-md text-primary">s</span>
+</div>
+<div class="flex items-center gap-1 text-secondary-fixed font-body-sm text-[11px]">
+<span class="material-symbols-outlined text-[13px] text-primary">emoji_events</span>
+<span class="">ชิงแชมป์ภาคอีสาน</span>
+</div>
+</div>
+<!-- Metric Tile 3: 100m Backstroke -->
+<div class="col-span-2 bg-surface-container-low/90 rounded-xl p-space-md flex items-center justify-between shadow-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-tertiary uppercase">กรรเชียง 100m</span>
+<span class="px-2 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant text-[10px] font-label-md">Long Course</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">สถิติทางการรอบคัดเลือก กีฬาเยาวชนแห่งชาติ</span>
+</div>
+<div class="flex items-baseline gap-1 bg-surface-container px-3 py-1.5 rounded-lg">
+<span class="font-telemetry-num text-headline-sm text-on-surface font-bold">1:05.40</span>
+<span class="font-label-md text-label-md text-tertiary">s</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Attendance & Performance Insights Widget -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-4 bg-primary-container rounded-full"></div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">การฝึกซ้อมและประเมินผล</h2>
+</div>
+<span class="font-label-md text-label-md text-primary tracking-wider">WK-08</span>
+</div>
+<div class="bg-surface-container/80 rounded-xl p-space-md flex flex-col gap-space-md shadow-lg">
+<!-- Attendance Progress Row -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+<span class="font-title-md text-body-md font-semibold text-on-surface">ความสม่ำเสมอในสระ</span>
+</div>
+<span class="font-headline-sm text-body-lg text-primary font-bold">5 / 6 ครั้ง</span>
+</div>
+<!-- Weekly Dot Tracker -->
+<div class="grid grid-cols-6 gap-2 pt-1">
+<div class="flex flex-col items-center gap-1">
+<div class="w-full h-2 rounded-full bg-primary shadow-[0_0_8px_#4cd6fb]"></div>
+<span class="font-label-md text-[10px] text-on-surface">จ.</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-full h-2 rounded-full bg-primary shadow-[0_0_8px_#4cd6fb]"></div>
+<span class="font-label-md text-[10px] text-on-surface">อ.</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-full h-2 rounded-full bg-primary shadow-[0_0_8px_#4cd6fb]"></div>
+<span class="font-label-md text-[10px] text-on-surface">พ.</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-full h-2 rounded-full bg-primary shadow-[0_0_8px_#4cd6fb]"></div>
+<span class="font-label-md text-[10px] text-on-surface">พฤ.</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-full h-2 rounded-full bg-primary shadow-[0_0_8px_#4cd6fb]"></div>
+<span class="font-label-md text-[10px] text-on-surface">ศ.</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-full h-2 rounded-full bg-surface-container-highest"></div>
+<span class="font-label-md text-[10px] text-outline">ส.</span>
+</div>
+</div>
+</div>
+<!-- Coach Feedback Quote Box -->
+<div class="bg-surface-container-high/60 rounded-lg p-space-sm flex gap-3 items-start">
+<div class="w-8 h-8 rounded-full bg-secondary-container/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">sports</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary-fixed">โค้ชธนดล (หัวหน้าผู้ฝึกสอน)</span>
+<span class="font-label-md text-[10px] text-on-surface-variant">เมื่อวาน 18:30</span>
+</div>
+<p class="font-body-md text-body-sm text-on-surface mt-0.5 leading-relaxed">
+              “การกลับตัวท่ากรรเชียงทำได้เร็วขึ้น สโตรกนิ่งมาก จังหวะดึงน้ำช่วง 15 เมตรสุดท้ายรักษาพลังได้ดีมาก รักษาระดับความเข้มข้นนี้ไว้เพื่อชิงชัยรอบไฟนอล”
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Swimmer Quick Action: Log Practicing Modal Mock -->
+<div class="hidden rounded-xl bg-surface-container-highest/90 p-space-md flex-col gap-space-sm shadow-2xl backdrop-blur-xl" id="quick-log-modal">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-title-md text-primary font-bold">บันทึกเวลาฝึกซ้อมประจำวัน</span>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="triggerLogModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">ระยะทาง / ท่า</label>
+<div class="bg-surface-container-low px-3 py-2 rounded-lg text-on-surface font-body-md text-body-sm">
+            50m ฟรีสไตล์
+          </div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">เวลาที่ทำได้ (วินาที)</label>
+<input class="bg-surface-container-low px-3 py-2 rounded-lg text-primary font-telemetry-num text-body-lg focus:outline-none" placeholder="27.05" type="text">
+</div>
+</div>
+<button class="mt-1 w-full py-2.5 rounded-full bg-primary text-on-primary font-label-lg text-label-md tracking-wider uppercase font-bold flex items-center justify-center gap-1.5 shadow-[0_0_14px_rgba(76,214,251,0.4)]" onclick="saveLogDemo()"><span class="px-2 py-0.5 rounded-md bg-secondary-container/30 text-secondary-fixed text-[11px] font-label-md font-medium">ทีมแข่งขัน A-Team</span><span class="text-on-surface-variant text-[11px] font-body-sm">• สปรินต์ / ฟรีสไตล์</span></button>
+</div>
+</div>
+<!-- VIEW 2: REGISTER / JOIN CLUB APPLICATION -->
+<div class="hidden flex-col gap-space-lg transition-opacity duration-300" id="view-register">
+<!-- Hero / Information Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container/90 p-space-md flex flex-col gap-space-md shadow-xl">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-secondary-container/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">flag</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">สมัครเป็นนักกีฬาชมรมตักสิลา</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">เปิดรับสมัครนักกีฬาว่ายน้ำรุ่นเยาวชน และรุ่นทั่วไป ประจำปี 2568</span>
+</div>
+</div>
+<!-- Highlights / Qualifications -->
+<div class="bg-surface-container-low/90 rounded-lg p-space-sm flex flex-col gap-2">
+<span class="font-label-lg text-label-lg text-tertiary">คุณสมบัติและการคัดเลือกตัว (Trials Criteria)</span>
+<ul class="flex flex-col gap-1.5 font-body-md text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">อายุระหว่าง 8 - 22 ปี สุขภาพร่างกายสมบูรณ์ แข็งแรง</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">สามารถว่ายน้ำท่ามาตรฐานได้อย่างน้อย 2 ท่า (ระยะ 50 เมตร)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">มีความมุ่งมั่น พร้อมเข้าโปรแกรมการฝึกซ้อมไม่น้อยกว่า 4 วัน/สัปดาห์</span>
+</li>
+</ul>
+</div>
+<!-- Required Documents Notice -->
+<div class="flex items-center gap-space-sm bg-surface-container-high/50 p-space-sm rounded-lg">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px] shrink-0">attach_file</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-md text-secondary-fixed">เอกสารประกอบการสมัครที่ต้องเตรียม</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant leading-tight">ใบรับรองแพทย์ตรวจร่างกายไม่เกิน 30 วัน, ประวัติเวลาเดิม (ถ้ามี), สำเนาบัตรประชาชน/สูติบัตร</span>
+</div>
+</div>
+</div>
+<!-- Application Form Entry Points -->
+<div class="bg-surface-container/90 rounded-xl p-space-md flex flex-col gap-space-md shadow-lg">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">ขั้นตอนการยื่นใบสมัครออนไลน์</span>
+<span class="font-label-md text-label-md text-tertiary">STEP 1 OF 3</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Input Field 1: Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">ชื่อ - นามสกุล ผู้สมัคร (ภาษาไทย)</label>
+<div class="flex items-center bg-surface-container-low px-3 py-2.5 rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2">person</span>
+<input class="bg-transparent text-body-md text-on-surface focus:outline-none w-full placeholder:text-outline" placeholder="ระบุชื่อและนามสกุลจริง..." type="text">
+</div>
+</div>
+<!-- Input Field 2: Age & Gender -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">วัน/เดือน/ปี เกิด</label>
+<div class="flex items-center bg-surface-container-low px-3 py-2.5 rounded-lg text-on-surface">
+<input class="bg-transparent text-body-md text-on-surface focus:outline-none w-full placeholder:text-outline" placeholder="วว/ดด/ปปปป" type="text">
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">เบอร์โทรติดต่อ</label>
+<div class="flex items-center bg-surface-container-low px-3 py-2.5 rounded-lg text-on-surface">
+<input class="bg-transparent text-body-md text-on-surface focus:outline-none w-full placeholder:text-outline" placeholder="08x-xxx-xxxx" type="tel">
+</div>
+</div>
+</div>
+<!-- Input Field 3: Primary Swimming Stroke -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">ท่าว่ายน้ำที่ถนัดที่สุด (Specialty)</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-3 rounded-lg bg-primary/10 text-primary font-label-md text-label-md text-center" type="button">
+              ฟรีสไตล์ (Freestyle)
+            </button>
+<button class="py-2 px-3 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md text-center" type="button">
+              กรรเชียง (Backstroke)
+            </button>
+<button class="py-2 px-3 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md text-center" type="button">
+              กบ (Breaststroke)
+            </button>
+<button class="py-2 px-3 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md text-center" type="button">
+              ผีเสื้อ (Butterfly)
+            </button>
+</div>
+</div>
+</div>
+<!-- Main Action CTA Button -->
+<button class="w-full py-3.5 px-4 rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-label-lg text-label-lg font-bold uppercase tracking-wider flex items-center justify-center gap-2 active:scale-98 transition-all shadow-[0_0_20px_rgba(0,180,216,0.45)] mt-2" onclick="handleApplicationSubmit()">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span class="">ส่งข้อมูลสมัครคัดเลือกนักกีฬา</span>
+</button>
+<span class="text-center font-body-sm text-[11px] text-outline">
+        เจ้าหน้าที่ฝ่ายคัดเลือกจะติดต่อกลับเพื่อนัดหมายเวลาลงสระทดสอบความเร็วภายใน 3 วันทำการ
+      </span>
+</div>
+<!-- Contact Coach Desk -->
+<div class="rounded-xl bg-surface-container-low/70 p-space-md flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-md font-semibold text-on-surface">มีข้อสงสัยเกี่ยวกับการสมัคร?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ติดต่อศูนย์ฝึกกีฬาว่ายน้ำตักสิลา</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high text-primary font-label-md text-label-md">
+        โทรสอบถาม
+      </button>
+</div>
+</div>
+<!-- Toast Notification System -->
+<div class="hidden fixed bottom-20 inset-x-6 z-50 bg-secondary-container text-on-secondary-container px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 animate-bounce" id="portal-toast">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-body-md text-body-sm font-medium" id="portal-toast-msg">บันทึกข้อมูลสำเร็จ</span>
+</div>
+</div>
+<script>
+  function switchPortalTab(tab) {
+    const viewProfile = document.getElementById('view-profile');
+    const viewRegister = document.getElementById('view-register');
+    const tabProfileBtn = document.getElementById('tab-profile-btn');
+    const tabRegisterBtn = document.getElementById('tab-register-btn');
+
+    if (tab === 'profile') {
+      viewProfile.classList.remove('hidden');
+      viewProfile.classList.add('flex');
+      viewRegister.classList.add('hidden');
+      viewRegister.classList.remove('flex');
+
+      tabProfileBtn.className = "flex-1 py-2 rounded-full font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all text-on-primary bg-gradient-to-r from-primary-container to-secondary-container shadow-[0_0_16px_rgba(0,180,216,0.35)]";
+      tabRegisterBtn.className = "flex-1 py-2 rounded-full font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all text-on-surface-variant hover:text-on-surface";
+    } else {
+      viewProfile.classList.add('hidden');
+      viewProfile.classList.remove('flex');
+      viewRegister.classList.remove('hidden');
+      viewRegister.classList.add('flex');
+
+      tabRegisterBtn.className = "flex-1 py-2 rounded-full font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all text-on-primary bg-gradient-to-r from-primary-container to-secondary-container shadow-[0_0_16px_rgba(0,180,216,0.35)]";
+      tabProfileBtn.className = "flex-1 py-2 rounded-full font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all text-on-surface-variant hover:text-on-surface";
+    }
+  }
+
+  function triggerLogModal() {
+    const modal = document.getElementById('quick-log-modal');
+    if (modal.classList.contains('hidden')) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    } else {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('portal-toast');
+    const toastMsg = document.getElementById('portal-toast-msg');
+    toastMsg.textContent = msg;
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 2800);
+  }
+
+  function saveLogDemo() {
+    triggerLogModal();
+    showToast('บันทึกสถิติการฝึกซ้อมลงในโปรไฟล์เรียบร้อยแล้ว');
+  }
+
+  function handleApplicationSubmit() {
+    showToast('ส่งใบสมัครเข้าร่วมทดสอบสมรรถภาพนักกีฬาเรียบร้อยแล้ว!');
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,180,216,0.12)]" data-active-classes="text-primary [&amp;&gt;div]:bg-primary/10 [&amp;&gt;div]:shadow-[0_0_12px_rgba(76,214,251,0.3)]"><div class="flex justify-around items-center h-16 px-space-xs max-w-lg mx-auto"><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-on-surface-variant transition-all hover:text-on-surface active:scale-95 group" data-path="home" href="1feb3334_Takkasila Swimming Club App.html"><div class="w-8 h-8 rounded-full flex items-center justify-center transition-all group-hover:bg-surface-container-high/50"><span class="material-symbols-outlined text-[22px]">home</span></div><span class="font-label-md text-[10px] leading-tight font-medium mt-0.5 truncate max-w-full">หน้าแรก</span></a><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-on-surface-variant transition-all hover:text-on-surface active:scale-95 group" data-path="about-coaches-athletes" href="4c3ae8f4_ประวัติ โค้ช และนักกีฬา.html"><div class="w-8 h-8 rounded-full flex items-center justify-center transition-all group-hover:bg-surface-container-high/50"><span class="material-symbols-outlined text-[22px]">groups</span></div><span class="font-label-md text-[10px] leading-tight font-medium mt-0.5 truncate max-w-full">เกี่ยวกับ</span></a><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-on-surface-variant transition-all hover:text-on-surface active:scale-95 group" data-path="competitions-results" href="6563d493_รายการและผลการแข่งขัน.html"><div class="w-8 h-8 rounded-full flex items-center justify-center transition-all group-hover:bg-surface-container-high/50"><span class="material-symbols-outlined text-[22px]">timer</span></div><span class="font-label-md text-[10px] leading-tight font-medium mt-0.5 truncate max-w-full">การแข่งขัน</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-14 h-14 rounded-xl transition-all active:scale-95 group text-primary [&amp;&gt;div]:bg-primary/10 [&amp;&gt;div]:shadow-[0_0_12px_rgba(76,214,251,0.3)]" data-path="athlete-portal" href="c3443edd_โปรไฟล์นักกีฬาและระบบสมาชิก.html"><div class="w-8 h-8 rounded-full flex items-center justify-center transition-all group-hover:bg-surface-container-high/50"><span class="material-symbols-outlined text-[22px]">badge</span></div><span class="font-label-md text-[10px] leading-tight font-medium mt-0.5 truncate max-w-full">นักกีฬา</span></a><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-on-surface-variant transition-all hover:text-on-surface active:scale-95 group" data-path="admin-console" href="3dc06a5f_ระบบผู้ดูแลระบบ Admin Console.html"><div class="w-8 h-8 rounded-full flex items-center justify-center transition-all group-hover:bg-surface-container-high/50"><span class="material-symbols-outlined text-[22px]">admin_panel_settings</span></div><span class="font-label-md text-[10px] leading-tight font-medium mt-0.5 truncate max-w-full">แอดมิน</span></a></div></nav>
+
+
+
+</body></html>

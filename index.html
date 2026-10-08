@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="th" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Takkasila Swimming Club Hub — Stitch Design Portal</title>
+  <meta name="description" content="Takkasila Swimming Club Interactive Stitch Design Showcase & Device Simulator">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "navy-abyss": "#0A122A",
+            "navy-deep": "#0B132B",
+            "navy-card": "#171E37",
+            "navy-border": "rgba(72, 202, 228, 0.18)",
+            "primary-cyan": "#4CD6FB",
+            "primary-accent": "#00B4D8",
+            "secondary-blue": "#3A86FF",
+            "text-light": "#DBE1FF",
+            "text-muted": "#BCC9CE"
+          },
+          fontFamily: {
+            display: ["'Space Grotesk'", "sans-serif"],
+            body: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #0A122A;
+      color: #DBE1FF;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .caustic-bg {
+      background: 
+        radial-gradient(circle at 15% 15%, rgba(0, 180, 216, 0.18), transparent 45%),
+        radial-gradient(circle at 85% 25%, rgba(58, 134, 255, 0.15), transparent 40%),
+        radial-gradient(circle at 50% 85%, rgba(76, 214, 251, 0.1), transparent 50%),
+        #0A122A;
+    }
+    .glass-card {
+      background: rgba(23, 30, 55, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(72, 202, 228, 0.18);
+    }
+    .glass-card-hover:hover {
+      background: rgba(28, 37, 65, 0.9);
+      border-color: rgba(76, 214, 251, 0.4);
+      box-shadow: 0 8px 32px -4px rgba(0, 180, 216, 0.25);
+    }
+    .electric-glow {
+      box-shadow: 0 0 20px rgba(0, 180, 216, 0.45);
+    }
+    .phone-mockup {
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 180, 216, 0.25);
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A122A;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #171E37;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00B4D8;
+    }
+  </style>
+</head>
+<body class="caustic-bg min-h-screen flex flex-col">
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-50 glass-card border-b border-navy-border px-6 py-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-secondary-blue to-primary-accent flex items-center justify-center p-2 electric-glow">
+          <span class="material-symbols-outlined text-white text-[24px]">pool</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="font-display font-bold text-xl text-white tracking-wide">Takkasila Swimming Club Hub</h1>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-primary-accent/20 text-primary-cyan border border-primary-cyan/30 font-semibold font-display">STITCH LOADED</span>
+          </div>
+          <p class="text-xs text-text-muted">ชมรมว่ายน้ำตักสิลา • 17 Screen Instances • Project ID: 16948290330630803172</p>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="flex items-center gap-2 bg-navy-abyss/80 p-1.5 rounded-full border border-navy-border">
+        <button id="tab-simulator" onclick="switchMainTab('simulator')" class="px-4 py-1.5 rounded-full text-xs font-semibold font-display transition-all bg-gradient-to-r from-primary-accent to-secondary-blue text-white shadow-md">
+          <span class="material-symbols-outlined text-sm align-middle mr-1">smartphone</span> Device Simulator
+        </button>
+        <button id="tab-screens" onclick="switchMainTab('screens')" class="px-4 py-1.5 rounded-full text-xs font-semibold font-display transition-all text-text-muted hover:text-white">
+          <span class="material-symbols-outlined text-sm align-middle mr-1">grid_view</span> All Screens (7)
+        </button>
+        <button id="tab-assets" onclick="switchMainTab('assets')" class="px-4 py-1.5 rounded-full text-xs font-semibold font-display transition-all text-text-muted hover:text-white">
+          <span class="material-symbols-outlined text-sm align-middle mr-1">photo_library</span> Media & Portraits (9)
+        </button>
+        <button id="tab-design" onclick="switchMainTab('design')" class="px-4 py-1.5 rounded-full text-xs font-semibold font-display transition-all text-text-muted hover:text-white">
+          <span class="material-symbols-outlined text-sm align-middle mr-1">palette</span> Design System
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Body -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex-1 w-full">
+
+    <!-- ==================== TAB 1: DEVICE SIMULATOR ==================== -->
+    <section id="view-simulator" class="block">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Screen Selector Sidebar -->
+        <div class="lg:col-span-4 flex flex-col gap-3">
+          <div class="glass-card rounded-2xl p-4">
+            <h2 class="font-display font-bold text-sm tracking-wide text-primary-cyan uppercase flex items-center justify-between mb-3">
+              <span>Interactive Screens</span>
+              <span class="text-xs bg-primary-accent/20 px-2 py-0.5 rounded text-primary-cyan">7 Available</span>
+            </h2>
+            <div class="flex flex-col gap-2" id="screens-menu-list">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Project Stats Card -->
+          <div class="glass-card rounded-2xl p-4 text-xs space-y-2">
+            <h3 class="font-display font-bold text-sm text-white">Project Quick Facts</h3>
+            <div class="flex justify-between py-1 border-b border-white/5">
+              <span class="text-text-muted">Club Name</span>
+              <span class="text-white font-medium">Takkasila Swimming Club</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-white/5">
+              <span class="text-text-muted">Device Mode</span>
+              <span class="text-primary-cyan font-mono">Mobile (390×844)</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-white/5">
+              <span class="text-text-muted">Color Theme</span>
+              <span class="text-white">Dark Aquatic Obsidian</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-white/5">
+              <span class="text-text-muted">Typography</span>
+              <span class="text-white">Space Grotesk / Inter</span>
+            </div>
+            <div class="flex justify-between py-1">
+              <span class="text-text-muted">Design System</span>
+              <a href="DESIGN_SYSTEM.md" target="_blank" class="text-primary-cyan hover:underline flex items-center gap-1">
+                DESIGN_SYSTEM.md <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Device Frame Simulator -->
+        <div class="lg:col-span-8 flex flex-col items-center">
+          <!-- Controls Bar -->
+          <div class="w-full max-w-[420px] mb-3 flex items-center justify-between glass-card px-4 py-2 rounded-xl text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span id="current-screen-title" class="font-medium text-white truncate max-w-[180px]">Loading...</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="reloadSimulator()" title="Reload Screen" class="p-1 hover:text-primary-cyan transition-colors">
+                <span class="material-symbols-outlined text-sm">refresh</span>
+              </button>
+              <button onclick="openCurrentScreenNewTab()" title="Open Fullscreen in New Tab" class="p-1 hover:text-primary-cyan transition-colors flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Smartphone Shell Frame -->
+          <div class="relative w-[390px] h-[810px] rounded-[52px] bg-[#111827] border-[10px] border-[#1F2937] phone-mockup overflow-hidden flex flex-col">
+            <!-- Dynamic Island / Notch -->
+            <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-28 h-6 bg-black rounded-full z-30 flex items-center justify-center">
+              <div class="w-2.5 h-2.5 rounded-full bg-[#1e293b] ml-12"></div>
+            </div>
+
+            <!-- Iframe Container -->
+            <div class="w-full h-full bg-[#0A122A] overflow-hidden">
+              <iframe id="phone-frame" src="screens/1feb3334_Takkasila Swimming Club App.html" class="w-full h-full border-none" title="Screen Simulator"></iframe>
+            </div>
+          </div>
+
+          <p class="text-xs text-text-muted mt-3 text-center">
+            Tip: Interactive bottom navigation links inside the screens are fully wired up! You can click inside the frame to navigate.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== TAB 2: ALL SCREENS GRID ==================== -->
+    <section id="view-screens" class="hidden">
+      <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="font-display font-bold text-2xl text-white">All Downloaded HTML Screens</h2>
+          <p class="text-sm text-text-muted">7 fully rendered responsive screens synchronized from Stitch MCP</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="screens-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- ==================== TAB 3: MEDIA & PORTRAITS GALLERY ==================== -->
+    <section id="view-assets" class="hidden">
+      <div class="mb-6">
+        <h2 class="font-display font-bold text-2xl text-white">Portraits & Photographic Assets</h2>
+        <p class="text-sm text-text-muted">High-definition AI-generated coaching staff and competitive athlete portraits in club uniform</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="assets-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- ==================== TAB 4: DESIGN SYSTEM EXPLORER ==================== -->
+    <section id="view-design" class="hidden space-y-8">
+      <div class="glass-card rounded-2xl p-6">
+        <h2 class="font-display font-bold text-2xl text-white mb-2">Takkasila Aquatic Athletic Design System</h2>
+        <p class="text-sm text-text-muted max-w-3xl">
+          Calibrated for competitive swimming clubs, featuring Dark Futuristic HUD aesthetics, fluid caustics, glassmorphic depth, and precision telemetry metrics.
+        </p>
+      </div>
+
+      <!-- Color Swatches -->
+      <div class="glass-card rounded-2xl p-6">
+        <h3 class="font-display font-bold text-lg text-white mb-4 flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-primary-cyan"></span> Color Tokens
+        </h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4" id="color-tokens-grid">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- Typography -->
+      <div class="glass-card rounded-2xl p-6">
+        <h3 class="font-display font-bold text-lg text-white mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary-cyan text-base">text_fields</span> Typography Hierarchy
+        </h3>
+        <div class="space-y-4">
+          <div class="border-b border-navy-border pb-3">
+            <span class="text-xs text-primary-cyan font-display uppercase tracking-widest">Display Hero (Space Grotesk 40px Bold)</span>
+            <div class="font-display font-bold text-3xl sm:text-4xl text-white mt-1">TAKKASILA AQUATICS 2026</div>
+          </div>
+          <div class="border-b border-navy-border pb-3">
+            <span class="text-xs text-primary-cyan font-display uppercase tracking-widest">Headline Large (Space Grotesk 30px Bold)</span>
+            <div class="font-display font-bold text-2xl sm:text-3xl text-white mt-1">ทำเนียบนักกีฬาและผลการแข่งขัน</div>
+          </div>
+          <div class="border-b border-navy-border pb-3">
+            <span class="text-xs text-primary-cyan font-display uppercase tracking-widest">Telemetry Metric (Space Grotesk 28px Bold)</span>
+            <div class="font-display font-bold text-2xl text-primary-cyan mt-1">00:24.82 <span class="text-xs text-text-muted font-normal">NEW RECORD</span></div>
+          </div>
+          <div class="border-b border-navy-border pb-3">
+            <span class="text-xs text-primary-cyan font-display uppercase tracking-widest">Body Text (Inter 14px Regular)</span>
+            <p class="text-sm text-text-muted mt-1 leading-relaxed">
+              ชมรมว่ายน้ำตักสิลา มุ่งมั่นฝึกฝนพัฒนาทักษะว่ายน้ำระดับชาติ สร้างเสริมระเบียบวินัยและจิตวิญญาณแห่งความเป็นเลิศทางกีฬา
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elevation & Components -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass-card rounded-2xl p-6">
+          <h3 class="font-display font-bold text-base text-white mb-3">Athletic Buttons</h3>
+          <div class="flex flex-wrap items-center gap-3">
+            <button class="px-5 py-2.5 rounded-full font-display font-bold text-xs bg-gradient-to-r from-primary-accent to-secondary-blue text-white electric-glow">
+              Primary Button
+            </button>
+            <button class="px-5 py-2.5 rounded-full font-display font-bold text-xs bg-white/5 border border-primary-cyan/40 text-primary-cyan hover:bg-white/10">
+              Ghost Button
+            </button>
+            <span class="px-3 py-1 rounded-full bg-secondary-blue/20 text-secondary-blue border border-secondary-blue/40 text-[11px] font-bold font-display uppercase">
+              HEAT 01 • LANE 4
+            </span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <h3 class="font-display font-bold text-base text-white mb-3">Telemetry Metric Tile</h3>
+          <div class="p-4 rounded-xl bg-navy-card/90 border border-primary-cyan/30 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase font-display font-bold text-primary-cyan tracking-wider">50M Freestyle Split</span>
+              <div class="font-display font-bold text-2xl text-white mt-0.5">23.95s</div>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-primary-accent/10 border border-primary-cyan/30 flex items-center justify-center text-primary-cyan">
+              <span class="material-symbols-outlined text-[20px]">timer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Image Lightbox Modal -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-all">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="max-w-4xl max-h-[90vh] flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="Enlarged" class="max-w-full max-h-[80vh] rounded-2xl shadow-2xl object-contain border border-primary-cyan/30">
+      <p id="lightbox-caption" class="text-sm text-text-light mt-4 text-center font-display"></p>
+    </div>
+  </div>
+
+  <script>
+    const screensData = [
+      {
+        id: "1feb3334",
+        title: "Takkasila Swimming Club App (Main Hub)",
+        file: "screens/1feb3334_Takkasila Swimming Club App.html",
+        category: "Main Hub",
+        badge: "PRO HUD",
+        desc: "หน้าจอศูนย์กลางชมรมหลัก ประกอบด้วย Hero Card กราฟิกไฮโดรเวฟ, สถิติเหรียญรางวัล, เซสชันฝึกซ้อมสด และข่าวสารชมรม",
+        screenshot: "assets/df826da7_screenshot.png"
+      },
+      {
+        id: "df826da7",
+        title: "หน้าแรก ข่าวสารชมรม (Club Feed)",
+        file: "screens/df826da7_หน้าแรก ข่าวสารชมรม.html",
+        category: "Feed",
+        badge: "News Feed",
+        desc: "หน้ารวมข่าวสาร ความเคลื่อนไหว กิจกรรมการฝึกซ้อม และประกาศสำคัญของชมรมว่ายน้ำ",
+        screenshot: "assets/df826da7_screenshot.png"
+      },
+      {
+        id: "c3443edd",
+        title: "โปรไฟล์นักกีฬาและระบบสมาชิก",
+        file: "screens/c3443edd_โปรไฟล์นักกีฬาและระบบสมาชิก.html",
+        category: "Athletes",
+        badge: "Roster",
+        desc: "บัตรประจำตัวนักกีฬา สถิติส่วนบุคคล (PB), ตารางฝึกซ้อม, สถานะสมาชิกชมรม และข้อมูลทางกายภาพ",
+        screenshot: "assets/c3443edd_screenshot.png"
+      },
+      {
+        id: "277f5498",
+        title: "ทีมผู้ฝึกสอนและโค้ช (Coaching Staff)",
+        file: "screens/277f5498_ทีมผู้ฝึกสอนและโค้ช Coaching Staff.html",
+        category: "Coaches",
+        badge: "Staff",
+        desc: "ทำเนียบหัวหน้าผู้ฝึกสอน โค้ชวิทยาศาสตร์การกีฬา และทีมผู้ช่วย พร้อมประวัติการศึกษาและผลงาน",
+        screenshot: "assets/277f5498_screenshot.png"
+      },
+      {
+        id: "6563d493",
+        title: "รายการและผลการแข่งขัน (Results)",
+        file: "screens/6563d493_รายการและผลการแข่งขัน.html",
+        category: "Competitions",
+        badge: "Telemetry",
+        desc: "ตารางการแข่งขันชิงแชมป์ระดับภาค/ประเทศ, ตารางเวลาปล่อยตัว (Heat/Lane), และผลเวลาแบบเรียลไทม์",
+        screenshot: "assets/6563d493_screenshot.png"
+      },
+      {
+        id: "4c3ae8f4",
+        title: "ประวัติ โค้ช และนักกีฬา (Bio)",
+        file: "screens/4c3ae8f4_ประวัติ โค้ช และนักกีฬา.html",
+        category: "About",
+        badge: "Biography",
+        desc: "เจาะลึกชีวประวัติ ผลงานเกียรติยศ และเส้นทางสู่ความสำเร็จของนักกีฬาและผู้ฝึกสอนตักสิลา",
+        screenshot: "assets/4c3ae8f4_screenshot.png"
+      },
+      {
+        id: "3dc06a5f",
+        title: "ระบบผู้ดูแลระบบ (Admin Console)",
+        file: "screens/3dc06a5f_ระบบผู้ดูแลระบบ Admin Console.html",
+        category: "Admin",
+        badge: "Management",
+        desc: "ระบบบริหารจัดการสมาชิก ตรวจสอบการลงเวลาซ้อม แจ้งเตือน และจัดการอุปกรณ์ว่ายน้ำของสโมสร",
+        screenshot: "assets/3dc06a5f_screenshot.png"
+      }
+    ];
+
+    const assetsData = [
+      {
+        file: "assets/4bcd9b60_screenshot.png",
+        title: "Young Male Swimmer Portrait",
+        desc: "นักกีฬาว่ายน้ำรุ่นเยาว์ในชุดแจ็กเก็ตสโมสรตักสิลา"
+      },
+      {
+        file: "assets/87865f0a_screenshot.png",
+        title: "Competitive Athletic Portrait",
+        desc: "ภาพถ่ายพอร์ตเทรตนักกีฬาว่ายน้ำเหรียญรางวัลในชุดวอร์ม"
+      },
+      {
+        file: "assets/eb29e831_screenshot.png",
+        title: "Head Coach Standing Pose",
+        desc: "หัวหน้าผู้ฝึกสอนสโมสรในชุดแจ็กเก็ตฮู้ดดี้ตักสิลา"
+      },
+      {
+        file: "assets/bbc580dd_screenshot.png",
+        title: "Senior Head Coach Portrait",
+        desc: "อาจารย์ผู้ฝึกสอนอาวุโสพร้อมนกหวีดกีฬาและตราสโมสร"
+      },
+      {
+        file: "assets/a5a79c44_screenshot.png",
+        title: "Aquatic Coach Portrait Deck",
+        desc: "โค้ชประจำริมสระน้ำสนามกีฬาทางน้ำ"
+      },
+      {
+        file: "assets/82360704_screenshot.png",
+        title: "Club Identity & Event Photo",
+        desc: "ภาพบรรยากาศทีมงานและการจัดกิจกรรมสโมสร"
+      },
+      {
+        file: "assets/46501415_screenshot.png",
+        title: "Swimming Team Photo Reference",
+        desc: "ภาพถ่ายทีมและสมาชิกสโมสรว่ายน้ำ"
+      },
+      {
+        file: "assets/15406882_screenshot.png",
+        title: "Swimmer Competition Candid",
+        desc: "ภาพบันทึกการฝึกซ้อมและการแข่งขันจริง"
+      }
+    ];
+
+    const colorTokens = [
+      { name: "Primary Cyan", hex: "#4CD6FB", bg: "bg-[#4CD6FB]", text: "text-black" },
+      { name: "Primary Container", hex: "#00B4D8", bg: "bg-[#00B4D8]", text: "text-white" },
+      { name: "Secondary Blue", hex: "#3A86FF", bg: "bg-[#3A86FF]", text: "text-white" },
+      { name: "Tertiary Ice", hex: "#58D6F1", bg: "bg-[#58D6F1]", text: "text-black" },
+      { name: "Accent Light Cyan", hex: "#48CAE4", bg: "bg-[#48CAE4]", text: "text-black" },
+      { name: "Secondary Pale", hex: "#ADC6FF", bg: "bg-[#ADC6FF]", text: "text-black" },
+      { name: "Abyss Canvas", hex: "#0A122A", bg: "bg-[#0A122A]", text: "text-white" },
+      { name: "Deep Surface", hex: "#0B132B", bg: "bg-[#0B132B]", text: "text-white" },
+      { name: "Surface Container", hex: "#171E37", bg: "bg-[#171E37]", text: "text-white" },
+      { name: "Surface High", hex: "#212942", bg: "bg-[#212942]", text: "text-white" },
+      { name: "On Surface Text", hex: "#DBE1FF", bg: "bg-[#DBE1FF]", text: "text-black" },
+      { name: "Variant Text", hex: "#BCC9CE", bg: "bg-[#BCC9CE]", text: "text-black" }
+    ];
+
+    let currentScreenIndex = 0;
+
+    function init() {
+      renderScreensMenu();
+      renderScreensGrid();
+      renderAssetsGrid();
+      renderColorTokens();
+      selectScreen(0);
+    }
+
+    function switchMainTab(tab) {
+      const tabs = ['simulator', 'screens', 'assets', 'design'];
+      tabs.forEach(t => {
+        const view = document.getElementById('view-' + t);
+        const btn = document.getElementById('tab-' + t);
+        if (t === tab) {
+          view.classList.remove('hidden');
+          btn.className = "px-4 py-1.5 rounded-full text-xs font-semibold font-display transition-all bg-gradient-to-r from-primary-accent to-secondary-blue text-white shadow-md";
+        } else {
+          view.classList.add('hidden');
+          btn.className = "px-4 py-1.5 rounded-full text-xs font-semibold font-display transition-all text-text-muted hover:text-white";
+        }
+      });
+    }
+
+    function renderScreensMenu() {
+      const container = document.getElementById('screens-menu-list');
+      container.innerHTML = screensData.map((s, idx) => `
+        <button onclick="selectScreen(${idx})" id="menu-btn-${idx}" class="w-full text-left p-3 rounded-xl transition-all border ${idx === 0 ? 'bg-navy-border/40 border-primary-cyan/50 text-white' : 'border-transparent hover:bg-white/5 text-text-muted'} flex items-center justify-between group">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="w-2 h-2 rounded-full ${idx === 0 ? 'bg-primary-cyan' : 'bg-white/20 group-hover:bg-primary-cyan'} transition-colors shrink-0"></span>
+            <div class="truncate">
+              <div class="font-display font-medium text-xs text-white truncate">${s.title}</div>
+              <div class="text-[11px] text-text-muted">${s.category}</div>
+            </div>
+          </div>
+          <span class="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-white/10 text-primary-cyan shrink-0 font-display">${s.badge}</span>
+        </button>
+      `).join('');
+    }
+
+    function selectScreen(index) {
+      currentScreenIndex = index;
+      const screen = screensData[index];
+      const iframe = document.getElementById('phone-frame');
+      iframe.src = screen.file;
+      document.getElementById('current-screen-title').textContent = screen.title;
+
+      screensData.forEach((_, idx) => {
+        const btn = document.getElementById(`menu-btn-${idx}`);
+        if (btn) {
+          if (idx === index) {
+            btn.className = "w-full text-left p-3 rounded-xl transition-all border bg-navy-border/40 border-primary-cyan/50 text-white flex items-center justify-between";
+          } else {
+            btn.className = "w-full text-left p-3 rounded-xl transition-all border border-transparent hover:bg-white/5 text-text-muted flex items-center justify-between group";
+          }
+        }
+      });
+    }
+
+    function reloadSimulator() {
+      const iframe = document.getElementById('phone-frame');
+      iframe.src = iframe.src;
+    }
+
+    function openCurrentScreenNewTab() {
+      const screen = screensData[currentScreenIndex];
+      window.open(screen.file, '_blank');
+    }
+
+    function renderScreensGrid() {
+      const container = document.getElementById('screens-grid');
+      container.innerHTML = screensData.map((s, idx) => `
+        <div class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col transition-all">
+          <div class="relative h-64 bg-navy-abyss overflow-hidden group">
+            <iframe src="${s.file}" class="w-[390px] h-[844px] origin-top-left transform scale-[0.6] pointer-events-none border-none"></iframe>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-card via-transparent to-transparent"></div>
+            <div class="absolute top-3 right-3">
+              <span class="px-2 py-1 rounded bg-navy-deep/80 backdrop-blur-md text-primary-cyan font-display font-bold text-[10px] uppercase border border-primary-cyan/30">${s.badge}</span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-base text-white">${s.title}</h3>
+              <p class="text-xs text-text-muted mt-2 line-clamp-2 leading-relaxed">${s.desc}</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-navy-border flex items-center justify-between">
+              <button onclick="switchMainTab('simulator'); selectScreen(${idx});" class="text-xs text-primary-cyan hover:underline font-semibold font-display flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">smartphone</span> Simulate
+              </button>
+              <a href="${s.file}" target="_blank" class="text-xs text-text-muted hover:text-white flex items-center gap-1 font-display">
+                Open <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderAssetsGrid() {
+      const container = document.getElementById('assets-grid');
+      container.innerHTML = assetsData.map((a) => `
+        <div onclick="openLightbox('${a.file}', '${a.title}')" class="glass-card glass-card-hover rounded-2xl overflow-hidden cursor-pointer group transition-all">
+          <div class="aspect-square overflow-hidden bg-navy-abyss relative">
+            <img src="${a.file}" alt="${a.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-primary-accent/0 group-hover:bg-primary-accent/10 transition-colors"></div>
+          </div>
+          <div class="p-3">
+            <h4 class="font-display font-bold text-xs text-white truncate">${a.title}</h4>
+            <p class="text-[11px] text-text-muted mt-0.5 truncate">${a.desc}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderColorTokens() {
+      const container = document.getElementById('color-tokens-grid');
+      container.innerHTML = colorTokens.map(c => `
+        <div onclick="copyHex('${c.hex}')" class="p-3 rounded-xl bg-navy-card border border-navy-border cursor-pointer hover:border-primary-cyan/50 transition-all group">
+          <div class="w-full h-12 rounded-lg ${c.bg} border border-white/10 mb-2 flex items-center justify-center shadow-inner">
+            <span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 ${c.text} transition-opacity">content_copy</span>
+          </div>
+          <div class="font-display font-medium text-xs text-white truncate">${c.name}</div>
+          <div class="text-[11px] font-mono text-primary-cyan font-bold mt-0.5">${c.hex}</div>
+        </div>
+      `).join('');
+    }
+
+    function copyHex(hex) {
+      navigator.clipboard.writeText(hex);
+      const toast = document.createElement('div');
+      toast.className = 'fixed bottom-6 right-6 z-50 bg-primary-accent text-white px-4 py-2 rounded-xl text-xs font-display font-bold shadow-xl animate-bounce';
+      toast.textContent = `Copied ${hex} to clipboard!`;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 2000);
+    }
+
+    function openLightbox(src, caption) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').textContent = caption;
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>

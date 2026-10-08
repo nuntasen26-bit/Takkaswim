@@ -1,0 +1,414 @@
+<!DOCTYPE html><html class="dark" lang="th" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0a122a;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#adc6ff", "outline-variant": "#3d494d", "background": "#0a122a", "primary-container": "#00b4d8", "on-tertiary-container": "#00414c", "on-secondary-fixed-variant": "#004494", "outline": "#869398", "surface-dim": "#0a122a", "tertiary": "#58d6f1", "primary-fixed": "#b3ebff", "on-primary": "#003642", "surface-container-low": "#131a33", "surface-container-high": "#212942", "primary-fixed-dim": "#4cd6fb", "on-error": "#690005", "inverse-on-surface": "#282f49", "surface-bright": "#313852", "on-tertiary-fixed": "#001f25", "secondary-fixed": "#d8e2ff", "on-secondary": "#002e69", "on-error-container": "#ffdad6", "secondary-container": "#006be3", "surface-container": "#171e37", "tertiary-fixed-dim": "#58d6f1", "surface-variant": "#2c344d", "on-secondary-fixed": "#001a41", "on-secondary-container": "#f2f4ff", "on-surface-variant": "#bcc9ce", "error": "#ffb4ab", "on-surface": "#dbe1ff", "on-primary-container": "#00414f", "on-primary-fixed": "#001f27", "surface-tint": "#4cd6fb", "on-tertiary-fixed-variant": "#004e5b", "tertiary-fixed": "a7edff", "on-primary-fixed-variant": "#004e5f", "primary": "#4cd6fb", "inverse-primary": "#00677d", "surface-container-lowest": "#050d25", "on-background": "#dbe1ff", "error-container": "#93000a", "on-tertiary": "#00363f", "secondary-fixed-dim": "#adc6ff", "surface": "#0a122a", "surface-container-highest": "#2c344d", "tertiary-container": "#25b4ce", "inverse-surface": "#dbe1ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1rem", "space-lg": "1.5rem", "margin": "1.25rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "1rem", "space-xl": "2.25rem" }, fontFamily: { "label-md": ["Space Grotesk"], "body-sm": ["Inter"], "display": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "title-md": ["Inter"], "headline-md": ["Space Grotesk"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Space Grotesk"], "telemetry-num": ["Space Grotesk"] }, fontSize: { "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" }], "title-md": ["17px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "telemetry-num": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.03em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-high/60 shadow-[0_0_12px_rgba(76,214,251,0.2)]"><span class="material-symbols-outlined text-primary text-[24px]">pool</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary truncate tracking-tight">Takkasila</span><span class="font-label-md text-label-md text-on-surface-variant truncate uppercase tracking-wider">Swimming Club</span></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:text-primary transition-colors hover:bg-surface-container-high/40 active:scale-95"><span class="material-symbols-outlined text-[22px]">notifications</span></button><button class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high/40 transition-colors"><img alt="Takkasila Logo" class="w-8 h-8 rounded-full object-contain p-0.5 bg-surface-container-lowest/90 shadow-[0_0_8px_rgba(76,214,251,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzLLry7HIjyVrNleKHWB-G5jTSPLzS343zpsaCh9h2zqJzAcsZkbwLLF1aTXZjj8Vtzqe6XfPN8dXytcnt850HC0i16bJ0Ioji9iOj_r1xoV73XhG-tsXL3t9wrXYpx2W5l9ae-weWZI9ZuUIHlLYCdn-imTeONNWJpw4qRUOxZjxVDLkeTlVQ2ubI_5YxWaLzzHZgiPFA3Lh_nen1kgLuwmnTWco1Y2h-YaujliatWnkG_1xOnMGRTOhWdNJ4DtxTFUM"></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- Glowing Caustic Ambient Background Layer -->
+<div class="relative px-margin pt-space-md pb-space-lg overflow-hidden">
+<!-- Fluid Segmented Switcher Control -->
+<div class="relative bg-surface-container-low/90 backdrop-blur-xl p-1.5 rounded-full flex items-center justify-between shadow-[0_4px_24px_rgba(0,0,0,0.4)]">
+<button class="relative z-10 flex-1 py-2 px-3 text-center rounded-full transition-all duration-300 bg-primary-container text-on-primary shadow-[0_0_16px_rgba(0,180,216,0.4)]" id="tab-btn-history" onclick="switchTab('history')">
+<span class="font-headline-sm text-[13px] tracking-wide block">ประวัติชมรม</span>
+</button>
+<button class="relative z-10 flex-1 py-2 px-3 text-center rounded-full transition-all duration-300 text-on-surface-variant hover:text-on-surface" id="tab-btn-coaches" onclick="switchTab('coaches')">
+<span class="font-headline-sm text-[13px] tracking-wide block">ผู้ฝึกสอน</span>
+</button>
+<button class="relative z-10 flex-1 py-2 px-3 text-center rounded-full transition-all duration-300 text-on-surface-variant hover:text-on-surface" id="tab-btn-athletes" onclick="switchTab('athletes')">
+<span class="font-headline-sm text-[13px] tracking-wide block">ทำเนียบนักกีฬา</span>
+</button>
+</div>
+<!-- TAB PANE 1: CLUB HISTORY & VISION -->
+<div class="flex flex-col gap-space-lg mt-space-lg transition-opacity duration-300" id="pane-history">
+<!-- Crest Hero Feature Card -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-md p-space-lg shadow-xl overflow-hidden">
+<div class="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col items-center text-center relative z-10">
+<!-- Club Crest Shield -->
+<div class="relative mb-space-md group">
+<div class="absolute -inset-2 bg-gradient-to-r from-primary-container to-secondary-container rounded-3xl blur-lg opacity-40 group-hover:opacity-70 transition duration-500"></div>
+<div class="relative w-28 h-32 rounded-2xl bg-surface-container-lowest/80 border border-outline-variant/30 flex items-center justify-center p-1.5 shadow-2xl overflow-hidden backdrop-blur-md"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuATqL6M3ZrLQ3rEgmV9e2hwQqjR3Rl2foDv6OoiGYAJ4otT_vVELanVgIeiW8LNunhy2b_K2YuD_uK1qi6T29OF-fG7j-idWHdIiMM79XXMD_gQdG4_lQvjvjibyZBRj6qR6034VpuD72CWB45cr0N1y7aDI9QZD-rUc0q490U03ZknxcD9kDPCVoa_RNp3zshn8n6Hoy42cl8sMSJgby-Y5l8OnNHnBXayhPEGS810cKXoZdIq9x-DOZiLNzitL65JFOk" alt="Takkasila Swimming Club Crest" class="w-full h-full object-contain drop-shadow-[0_0_12px_rgba(76,214,251,0.5)]"></div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary mb-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Est. 2012 • มหาวิทยาลัยราชภัฏมหาสารคาม</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-space-xs font-bold leading-tight">
+            ประวัติและวิสัยทัศน์<br><span class="text-primary">ชมรมว่ายน้ำราชภัฏตักสิลา</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm max-w-sm leading-relaxed">"ศูนย์กลางการพัฒนานักกีฬาว่ายน้ำสู่ความเป็นเลิศ สร้างความเข้มแข็งและภูมิคุ้มกันชีวิต"</p>
+</div>
+<!-- Metric Badges Row -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-lg pt-space-md border-t border-outline-variant/30">
+<div class="bg-surface-container-high/60 rounded-xl p-space-sm text-center">
+<span class="font-telemetry-num text-telemetry-num text-primary block">12+</span>
+<span class="font-label-md text-[10px] text-on-surface-variant uppercase">ปีแห่งความสำเร็จ</span>
+</div>
+<div class="bg-surface-container-high/60 rounded-xl p-space-sm text-center">
+<span class="font-telemetry-num text-telemetry-num text-secondary block">48</span>
+<span class="font-label-md text-[10px] text-on-surface-variant uppercase">เหรียญทองระดับชาติ</span>
+</div>
+<div class="bg-surface-container-high/60 rounded-xl p-space-sm text-center">
+<span class="font-telemetry-num text-telemetry-num text-tertiary block">120+</span>
+<span class="font-label-md text-[10px] text-on-surface-variant uppercase">นักกีฬาในสังกัด</span>
+</div>
+</div>
+</div>
+<!-- Hall of Fame Key Honors -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">military_tech</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">เกียรติประวัติเด่นประจำชมรม</span>
+</div>
+<span class="font-label-md text-[11px] text-primary uppercase tracking-wider">Hall of Fame</span>
+</div>
+<!-- Honor 1 -->
+<div class="bg-surface-container/60 hover:bg-surface-container/90 transition-all rounded-xl p-space-md flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-container to-secondary-container flex items-center justify-center flex-shrink-0 text-on-primary shadow-[0_0_14px_rgba(0,180,216,0.3)]">
+<span class="material-symbols-outlined text-[26px]">trophy</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1 mb-0.5">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">ชนะเลิศคะแนนรวมกีฬาบุคลากรและนักศึกษา</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-md text-[10px]">2023</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">"ศูนย์กลางการพัฒนานักกีฬาว่ายน้ำสู่ความเป็นเลิศ สร้างความเข้มแข็งและภูมิคุ้มกันชีวิต"</p>
+</div>
+</div>
+<!-- Honor 2 -->
+<div class="bg-surface-container/60 hover:bg-surface-container/90 transition-all rounded-xl p-space-md flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center flex-shrink-0 text-secondary shadow-md">
+<span class="material-symbols-outlined text-[26px]">workspace_premium</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1 mb-0.5">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">สร้างสถิติประเทศไทย รุ่นอายุ 15-18 ปี</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-md text-[10px]">2022</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">"ศูนย์กลางการพัฒนานักกีฬาว่ายน้ำสู่ความเป็นเลิศ สร้างความเข้มแข็งและภูมิคุ้มกันชีวิต"</p>
+</div>
+</div>
+<!-- Honor 3 -->
+<div class="bg-surface-container/60 hover:bg-surface-container/90 transition-all rounded-xl p-space-md flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center flex-shrink-0 text-tertiary shadow-md">
+<span class="material-symbols-outlined text-[26px]">stars</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1 mb-0.5">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">สโมสรพัฒนาเยาวชนดีเด่น (SAT Award)</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-md text-[10px]">2021</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">"ศูนย์กลางการพัฒนานักกีฬาว่ายน้ำสู่ความเป็นเลิศ สร้างความเข้มแข็งและภูมิคุ้มกันชีวิต"</p>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB PANE 2: COACHING STAFF -->
+<div class="hidden flex flex-col gap-space-lg mt-space-lg transition-opacity duration-300" id="pane-coaches">
+<div class="flex items-center justify-between px-1">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block">ทีมผู้ฝึกสอนมืออาชีพ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Coaching Staff &amp; High Performance Team</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">sports</span>
+</div>
+</div>
+<!-- Coach 1: Head Coach -->
+<div class="bg-surface-container/70 backdrop-blur-md rounded-2xl p-space-lg shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full pointer-events-none"></div>
+<div class="flex items-start gap-space-md relative z-10">
+<div class="relative flex-shrink-0">
+<div class="w-20 h-20 rounded-2xl overflow-hidden bg-surface-container-highest shadow-[0_0_16px_rgba(76,214,251,0.25)]">
+<img class="w-full h-full object-cover" data-alt="Head Coach Thanagorn, distinguished middle-aged Thai swimming coach standing poolside with a digital sports stopwatch, confident leadership posture, deep navy aquatic club athletic polo shirt, athletic indoor pool stadium background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb5xRzLFWpl7NMCaYN67h1sg8_5ZwvYSJWNKqm4tY3hsSrCVB6b20VxKBR0CQqm2JUIt4MC6sXdBsK0rbb1Gj68XHFeqWsX4ojf2AqbBkNxjoSaMpMGhD7Sv2mRe3Cut-g_QpqieimfNWM-dCljQsCC4rZffzniXiXBLfjjmzCEb4d76N5Pm0A4coTxhnCAO7ubAs87Z2i-UhT0H9IEnMaM69poAPMTGB9Gha_HD8Qwg3X1sNeUNWUjg">
+</div>
+<span class="absolute -bottom-2 -right-1 px-2 py-0.5 bg-primary text-on-primary font-label-md text-[10px] font-bold rounded-full uppercase shadow">HEAD</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-[18px] text-on-surface font-bold">อ.ธนกร สุวรรณเวช</span>
+</div>
+<span class="font-label-md text-label-md text-primary mt-0.5">หัวหน้าผู้ฝึกสอน (Head Coach)</span>
+<div class="flex items-center gap-1 mt-2 text-on-surface-variant font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span>
+<span class="">อดีตนักกีฬาว่ายน้ำทีมชาติไทย</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/30 flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            ผู้เชี่ยวชาญเทคนิคชีวกลศาสตร์ท่าฟรีสไตล์และผีเสื้อ นำพานักกีฬาคว้าเหรียญรางวัลในระดับกีฬาเยาวชนแห่งชาติและมหาวิทยาลัยมากกว่า 30 เหรียญ
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-1">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-primary font-label-md text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">school</span> ASCA Level 3 Certified
+            </span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-secondary font-label-md text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> Stroke Mechanics Specialist
+            </span>
+</div>
+</div>
+<button class="mt-space-md w-full py-2.5 rounded-xl bg-surface-container-high/80 hover:bg-surface-container-highest transition-all flex items-center justify-center gap-2 text-on-surface font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_month</span>
+<span class="">จองคอร์สวิเคราะห์สโตรก (Stroke Analysis)</span>
+</button>
+</div>
+<!-- Coach 2: Assistant & Strength Coach -->
+<div class="bg-surface-container/70 backdrop-blur-md rounded-2xl p-space-lg shadow-xl relative overflow-hidden">
+<div class="flex items-start gap-space-md relative z-10">
+<div class="relative flex-shrink-0">
+<div class="w-20 h-20 rounded-2xl overflow-hidden bg-surface-container-highest shadow-md">
+<img class="w-full h-full object-cover" data-alt="Strength Coach Kittisak, energetic young Thai athletic coach in a sports gym setting holding resistance equipment, smiling and encouraging posture, modern athletic facility, cool blue cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNIlJE54oD_oz2jRQXRZ_Wb9uZ4GhTLkIiAg3TTMtmMnkUVNXvxb6_ASCmvab0g54Uv6AdsFwf3fhSl0Bm-tE1s8mzjOT05-yaCchiNRc8ThvBtSRhDCggnS5TA6Fism3OpJBXdKubYzr_UixXyDbVKLjg24HcGwksfvttOMJEkpyv4VnA8gUZNJXPS9xDlibRtLFWfcj25myKg5tLM8N5ShHaOXQ3LBCf3PgREabPbwXW4LESuEnCeA">
+</div>
+<span class="absolute -bottom-2 -right-1 px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label-md text-[10px] font-bold rounded-full uppercase shadow">S&amp;C</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-[18px] text-on-surface font-bold">โค้ชกิตติศักดิ์ พลอยดี</span>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-0.5">ผู้ฝึกสอนเวทเทรนนิ่งและการฟื้นฟู</span>
+<div class="flex items-center gap-1 mt-2 text-on-surface-variant font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-[15px] text-tertiary">fitness_center</span>
+<span class="">Strength &amp; Conditioning Specialist</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/30 flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            ดูแลโปรแกรมพัฒนากล้ามเนื้อเฉพาะทางน้ำ (Dryland Workouts) การป้องกันการบาดเจ็บของไหล่และข้อต่อ และโภชนาการกีฬาสำหรับนักกีฬาสปรินต์
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-1">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-tertiary font-label-md text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">vital_signs</span> CSCS &amp; Sports Rehab
+            </span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-md text-[11px]">
+              ประสบการณ์ 8 ปี
+            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB PANE 3: ATHLETES ROSTER -->
+<div class="hidden flex flex-col gap-space-md mt-space-lg transition-opacity duration-300" id="pane-athletes">
+<!-- Category Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+<button class="athlete-filter-btn px-4 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-[12px] whitespace-nowrap shadow-[0_0_12px_rgba(76,214,251,0.3)]" onclick="filterAthletes('all', this)">
+          ทั้งหมด
+        </button>
+<button class="athlete-filter-btn px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-[12px] whitespace-nowrap" onclick="filterAthletes('senior', this)">
+          รุ่นทั่วไป
+        </button>
+<button class="athlete-filter-btn px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-[12px] whitespace-nowrap" onclick="filterAthletes('youth', this)">
+          รุ่นอายุ 15-18 ปี
+        </button>
+<button class="athlete-filter-btn px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-[12px] whitespace-nowrap" onclick="filterAthletes('junior', this)">
+          รุ่นอายุ 10-14 ปี
+        </button>
+</div>
+<!-- Athlete 1: Fah Karnpitcha (Featuring Provided IMAGE_3) -->
+<div class="athlete-card senior bg-surface-container/70 backdrop-blur-md rounded-2xl p-space-md shadow-xl relative overflow-hidden flex flex-col gap-space-md">
+<div class="flex items-start gap-space-md">
+<!-- Swimmer Avatar Frame with Glow -->
+<div class="relative flex-shrink-0">
+<div class="w-24 h-24 rounded-2xl overflow-hidden bg-surface-container-highest shadow-[0_0_18px_rgba(0,180,216,0.35)]">
+<img alt="น.ส. กานต์พิชชา ภักดี" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8PG4z5El8qqJGohf-reDEBHPpGIB9y1YkQOwPbQJDTMp_t_rhhzqR2sA5S92hMVYjC4Mjaqg0pxpd2q9je8eJ1BxZNm5zdRzJwCb5ELykRn2zE87Bh-61riK-52XCtQeu-XAp_6Sn3q_XCy_XZS5s7DXyVxAkO2xE2XGipNGmdpyqBUJdIpvAc8Sj3SYq4_zR4k7ZwO1MLHPDRvcpVU6qIA95zYwdxXA2fKPjGGikckhhj9biPcJxkQ">
+</div>
+<div class="absolute -bottom-2 -left-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-[9px] font-bold tracking-wider uppercase">
+              GOLD MEDALIST
+            </div>
+</div>
+<!-- Swimmer Info -->
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[17px] text-on-surface font-bold truncate">น.ส. กานต์พิชชา ภักดี</span>
+<span class="font-headline-sm text-primary text-[15px] font-bold">(ฟ้า)</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">กรรเชียง (Backstroke) 50m / 100m</span>
+<div class="mt-2 flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-md text-[10px]">รุ่นทั่วไป</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-md text-[10px]">สังกัด 4 ปี</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Split / PB Tile -->
+<div class="bg-surface-container-lowest/80 rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex flex-col pl-1">
+<span class="font-label-md text-[10px] text-tertiary uppercase tracking-wider flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              Personal Best (50m Backstroke)
+            </span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-bold tracking-tight">29.84 <span class="text-body-sm font-normal text-on-surface-variant">วินาที</span></span>
+</div>
+<div class="text-right pr-1">
+<span class="font-label-md text-[10px] text-on-surface-variant block uppercase">ล่าสุด</span>
+<span class="font-title-md text-[13px] text-primary font-semibold">เหรียญทองชิงแชมป์ ม.</span>
+</div>
+</div>
+<button class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container hover:shadow-[0_0_20px_rgba(0,180,216,0.4)] text-on-primary font-headline-sm text-[13px] font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]" onclick="toggleDetail('fah-detail')">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+<span class="">ดูข้อมูลสถิติละเอียด (Telemetry &amp; Splits)</span>
+</button>
+<!-- Hidden Expandable Detailed Split Record -->
+<div class="hidden flex flex-col gap-2 pt-2 border-t border-outline-variant/30" id="fah-detail">
+<div class="flex justify-between items-center text-body-sm text-[12px] py-1 text-on-surface-variant">
+<span class="">25m Split Reaction:</span>
+<span class="font-label-md text-on-surface font-bold">0.61s</span>
+</div>
+<div class="flex justify-between items-center text-body-sm text-[12px] py-1 text-on-surface-variant">
+<span class="">100m Backstroke PB:</span>
+<span class="font-label-md text-on-surface font-bold">1:05.42 นาที</span>
+</div>
+<div class="flex justify-between items-center text-body-sm text-[12px] py-1 text-on-surface-variant">
+<span class="">Stroke Rate เฉลี่ย:</span>
+<span class="font-label-md text-primary font-bold">44 SPM</span>
+</div>
+</div>
+</div>
+<!-- Athlete 2: Win Akarawin -->
+<div class="athlete-card senior bg-surface-container/70 backdrop-blur-md rounded-2xl p-space-md shadow-xl relative overflow-hidden flex flex-col gap-space-md">
+<div class="flex items-start gap-space-md">
+<!-- Swimmer Avatar Frame -->
+<div class="relative flex-shrink-0">
+<div class="w-24 h-24 rounded-2xl overflow-hidden bg-surface-container-highest shadow-md">
+<img class="w-full h-full object-cover" data-alt="Athletic young Thai male swimmer portrait in dark navy team warm-up jacket, disciplined confident expression, focused look, cool aquatic pool lighting, high resolution profile shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw48dAsZRMYoUSa4gyOChYf-t0QiO1ghOvRP5lcKsNxRmFltpvnQJ6EeqB_ec_SsxBnw_tmP4dyMAgcEIkmeaWfYMvx0dXAudk0rwmjkPRzwL2J-50yFRosYoZk5bbw2kWMTmRKnUrzICvwvGeqfZ30uym3YO1X3U7w1LZmm0ytDk6vdEY1_viJf0FjHN6AyJOJjzF6xjjkoIShfBS3VOEXnVGeCAn5l3hPQnLqBD4wMluMTzgZgQ2Nw">
+</div>
+<div class="absolute -bottom-2 -left-1 px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-md text-[9px] font-bold tracking-wider uppercase">
+              TOP RECORD
+            </div>
+</div>
+<!-- Swimmer Info -->
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[17px] text-on-surface font-bold truncate">นาย อัครวินท์ มงคลศิลป์</span>
+<span class="font-headline-sm text-secondary text-[15px] font-bold">(วิน)</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">กบ (Breaststroke) 100m / 200m</span>
+<div class="mt-2 flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-md text-[10px]">รุ่นทั่วไป</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-md text-[10px]">สังกัด 3 ปี</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Split / PB Tile -->
+<div class="bg-surface-container-lowest/80 rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex flex-col pl-1">
+<span class="font-label-md text-[10px] text-secondary uppercase tracking-wider">Personal Best (100m Breaststroke)</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-bold tracking-tight">1:04.12 <span class="text-body-sm font-normal text-on-surface-variant">นาที</span></span>
+</div>
+<div class="text-right pr-1">
+<span class="font-label-md text-[10px] text-on-surface-variant block uppercase">รายการ</span>
+<span class="font-title-md text-[13px] text-secondary font-semibold">กีฬามหาวิทยาลัย</span>
+</div>
+</div>
+<button class="w-full py-2.5 px-4 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-[13px] font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]" onclick="toggleDetail('win-detail')">
+<span class="material-symbols-outlined text-[18px] text-primary">query_stats</span>
+<span class="">ดูข้อมูลสถิติละเอียด (Telemetry &amp; Splits)</span>
+</button>
+<!-- Hidden Expandable Detailed Split Record -->
+<div class="hidden flex flex-col gap-2 pt-2 border-t border-outline-variant/30" id="win-detail">
+<div class="flex justify-between items-center text-body-sm text-[12px] py-1 text-on-surface-variant">
+<span class="">50m Split Turn:</span>
+<span class="font-label-md text-on-surface font-bold">29.98s</span>
+</div>
+<div class="flex justify-between items-center text-body-sm text-[12px] py-1 text-on-surface-variant">
+<span class="">DPS (Distance Per Stroke):</span>
+<span class="font-label-md text-on-surface font-bold">2.15 ม./สโตรก</span>
+</div>
+<div class="flex justify-between items-center text-body-sm text-[12px] py-1 text-on-surface-variant">
+<span class="">เหรียญเงิน ชิงชนะเลิศภาคอีสาน:</span>
+<span class="font-label-md text-secondary font-bold">2023 Season</span>
+</div>
+</div>
+</div>
+<!-- Athlete 3: Youth Prospect -->
+<div class="athlete-card youth bg-surface-container/70 backdrop-blur-md rounded-2xl p-space-md shadow-xl relative overflow-hidden flex flex-col gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="relative flex-shrink-0">
+<div class="w-24 h-24 rounded-2xl overflow-hidden bg-surface-container-highest shadow-md">
+<img class="w-full h-full object-cover" data-alt="Dynamic portrait of a teenage Thai boy swimmer wearing competitive swimming cap and mirror tinted goggles resting on forehead, smiling eagerly, blue stadium ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzzji8_xMNHRQej7sxf7nYhZqiMpsaMN2RI6NYX13IQZdxcdbwMpnGv0mpEbM7XLzwbsQSF56DJAS1Hmf0Ungor_U5cjnqKZVDGtALMZU8L1uIMaxQ3VUncnosjZEiIkS6YYyRmfhCYnNgMw8kBQzfcpwjnncmdkLAg1amUv5b3hemOStrprWcuEjep-1Owvo1R9yBN1uq9EDNARi-t7nw9mbfQZkYpaRuB6qlrduIKIrcX8SxsNLRpA">
+</div>
+<div class="absolute -bottom-2 -left-1 px-2 py-0.5 rounded-full bg-primary/20 text-primary font-label-md text-[9px] font-bold tracking-wider uppercase">
+              RISING STAR
+            </div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[17px] text-on-surface font-bold truncate">ด.ช. ณภัทร วงศ์ษา</span>
+<span class="font-headline-sm text-tertiary text-[15px] font-bold">(ภัทร)</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">ฟรีสไตล์ (Freestyle) 50m / 100m</span>
+<div class="mt-2 flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-label-md text-[10px]">รุ่นอายุ 15-18 ปี</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-md text-[10px]">ดาวรุ่ง</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/80 rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex flex-col pl-1">
+<span class="font-label-md text-[10px] text-tertiary uppercase tracking-wider">Personal Best (50m Free)</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-bold tracking-tight">25.18 <span class="text-body-sm font-normal text-on-surface-variant">วินาที</span></span>
+</div>
+<div class="text-right pr-1">
+<span class="font-label-md text-[10px] text-on-surface-variant block uppercase">อันดับ</span>
+<span class="font-title-md text-[13px] text-tertiary font-semibold">Top 3 เขต 4</span>
+</div>
+</div>
+<button class="w-full py-2.5 px-4 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-[13px] font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]" onclick="toggleDetail('phat-detail')">
+<span class="material-symbols-outlined text-[18px] text-primary">query_stats</span>
+<span class="">ดูข้อมูลสถิติละเอียด (Telemetry &amp; Splits)</span>
+</button>
+<div class="hidden flex flex-col gap-2 pt-2 border-t border-outline-variant/30" id="phat-detail">
+<div class="flex justify-between items-center text-body-sm text-[12px] py-1 text-on-surface-variant">
+<span class="">100m Free PB:</span>
+<span class="font-label-md text-on-surface font-bold">56.40 วินาที</span>
+</div>
+<div class="flex justify-between items-center text-body-sm text-[12px] py-1 text-on-surface-variant">
+<span class="">Reaction Time:</span>
+<span class="font-label-md text-primary font-bold">0.63s</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Logic -->
+<script>
+    function switchTab(tabKey) {
+      const panes = ['history', 'coaches', 'athletes'];
+      panes.forEach(p => {
+        const paneEl = document.getElementById('pane-' + p);
+        const btnEl = document.getElementById('tab-btn-' + p);
+        if (p === tabKey) {
+          paneEl.classList.remove('hidden');
+          btnEl.className = 'relative z-10 flex-1 py-2 px-3 text-center rounded-full transition-all duration-300 bg-primary-container text-on-primary shadow-[0_0_16px_rgba(0,180,216,0.4)]';
+        } else {
+          paneEl.classList.add('hidden');
+          btnEl.className = 'relative z-10 flex-1 py-2 px-3 text-center rounded-full transition-all duration-300 text-on-surface-variant hover:text-on-surface';
+        }
+      });
+    }
+
+    function toggleDetail(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.toggle('hidden');
+      }
+    }
+
+    function filterAthletes(category, btn) {
+      document.querySelectorAll('.athlete-filter-btn').forEach(b => {
+        b.className = 'athlete-filter-btn px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-[12px] whitespace-nowrap';
+      });
+      btn.className = 'athlete-filter-btn px-4 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-[12px] whitespace-nowrap shadow-[0_0_12px_rgba(76,214,251,0.3)]';
+
+      const cards = document.querySelectorAll('.athlete-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,180,216,0.12)]" data-active-classes="text-primary [&amp;&gt;div]:bg-primary/10 [&amp;&gt;div]:shadow-[0_0_12px_rgba(76,214,251,0.3)]"><div class="flex justify-around items-center h-16 px-space-xs max-w-lg mx-auto"><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-on-surface-variant transition-all hover:text-on-surface active:scale-95 group" data-path="home" href="1feb3334_Takkasila Swimming Club App.html"><div class="w-8 h-8 rounded-full flex items-center justify-center transition-all group-hover:bg-surface-container-high/50"><span class="material-symbols-outlined text-[22px]">home</span></div><span class="font-label-md text-[10px] leading-tight font-medium mt-0.5 truncate max-w-full">หน้าแรก</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-14 h-14 rounded-xl transition-all active:scale-95 group text-primary [&amp;&gt;div]:bg-primary/10 [&amp;&gt;div]:shadow-[0_0_12px_rgba(76,214,251,0.3)]" data-path="about-coaches-athletes" href="4c3ae8f4_ประวัติ โค้ช และนักกีฬา.html"><div class="w-8 h-8 rounded-full flex items-center justify-center transition-all group-hover:bg-surface-container-high/50"><span class="material-symbols-outlined text-[22px]">groups</span></div><span class="font-label-md text-[10px] leading-tight font-medium mt-0.5 truncate max-w-full">เกี่ยวกับ</span></a><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-on-surface-variant transition-all hover:text-on-surface active:scale-95 group" data-path="competitions-results" href="6563d493_รายการและผลการแข่งขัน.html"><div class="w-8 h-8 rounded-full flex items-center justify-center transition-all group-hover:bg-surface-container-high/50"><span class="material-symbols-outlined text-[22px]">timer</span></div><span class="font-label-md text-[10px] leading-tight font-medium mt-0.5 truncate max-w-full">การแข่งขัน</span></a><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-on-surface-variant transition-all hover:text-on-surface active:scale-95 group" data-path="athlete-portal" href="c3443edd_โปรไฟล์นักกีฬาและระบบสมาชิก.html"><div class="w-8 h-8 rounded-full flex items-center justify-center transition-all group-hover:bg-surface-container-high/50"><span class="material-symbols-outlined text-[22px]">badge</span></div><span class="font-label-md text-[10px] leading-tight font-medium mt-0.5 truncate max-w-full">นักกีฬา</span></a><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-on-surface-variant transition-all hover:text-on-surface active:scale-95 group" data-path="admin-console" href="3dc06a5f_ระบบผู้ดูแลระบบ Admin Console.html"><div class="w-8 h-8 rounded-full flex items-center justify-center transition-all group-hover:bg-surface-container-high/50"><span class="material-symbols-outlined text-[22px]">admin_panel_settings</span></div><span class="font-label-md text-[10px] leading-tight font-medium mt-0.5 truncate max-w-full">แอดมิน</span></a></div></nav>
+
+
+
+</body></html>
