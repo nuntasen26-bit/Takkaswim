@@ -1,0 +1,19 @@
+{
+  "name": "Takkasila Swimming Club Hub",
+  "short_name": "Takkaswim",
+  "description": "ชมรมว่ายน้ำราชภัฏตักสิลา — Official Aquatic Hub & Athlete Portal",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0A122A",
+  "theme_color": "#0A122A",
+  "icons": [
+    {
+      "src": "assets/df826da7_screenshot.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

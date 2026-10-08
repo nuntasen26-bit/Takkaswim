@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Takkasila Swimming Club Hub — Stitch Design Portal</title>
   <meta name="description" content="Takkasila Swimming Club Interactive Stitch Design Showcase & Device Simulator">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0A122A">
+  <link rel="apple-touch-icon" href="assets/df826da7_screenshot.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
@@ -112,6 +115,9 @@
         </button>
         <button id="tab-design" onclick="switchMainTab('design')" class="px-4 py-1.5 rounded-full text-xs font-semibold font-display transition-all text-text-muted hover:text-white">
           <span class="material-symbols-outlined text-sm align-middle mr-1">palette</span> Design System
+        </button>
+        <button id="btn-pwa-install" onclick="triggerPWAInstall()" class="px-3 py-1.5 rounded-full text-xs font-semibold font-display transition-all bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30 flex items-center gap-1">
+          <span class="material-symbols-outlined text-sm">download</span> ติดตั้งแอพ
         </button>
       </nav>
     </div>
@@ -594,6 +600,35 @@
       const modal = document.getElementById('lightbox-modal');
       modal.classList.add('hidden');
       modal.classList.remove('flex');
+    }
+
+    // PWA Install Prompt Handler
+    let deferredPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const btn = document.getElementById('btn-pwa-install');
+      if (btn) btn.classList.remove('hidden');
+    });
+
+    function triggerPWAInstall() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User installed the PWA');
+          }
+          deferredPrompt = null;
+        });
+      } else {
+        alert("คุณสามารถติดตั้งแอพนี้ได้โดย:\n1. บน Chrome/Edge: คลิกไอคอน 'ติดตั้ง' ที่แถบ Address Bar\n2. บน iPhone/iPad (Safari): กดปุ่มแชร์ แล้วเลือก 'เพิ่มไปยังหน้าจอโฮม' (Add to Home Screen)\n3. หรือเปิดไฟล์ start.bat / Takkaswim.command บนเครื่องของคุณ");
+      }
+    }
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(err => console.log('SW registration error:', err));
+      });
     }
 
     document.addEventListener('DOMContentLoaded', init);
